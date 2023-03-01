@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@bf7775b/css/all.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <script type = 'text/javascript' src = "<?php echo base_url(); ?>/assets/js/sidebar.js"></script>
+    <title>TIM - Chatbot</title>
 </head>
 <body class="bg-[#F3F4F6]">

@@ -1,6 +1,6 @@
 <?php $this->load->view('components/header'); ?>
 
-<div class="grid grid-cols-[250px_1fr]">
+<div class="grid md:grid-cols-[250px_1fr]">
     <div class="">
         <?php $this->load->view('components/sidebar'); ?>
     </div>
@@ -9,15 +9,11 @@
             <?php $this->load->view('components/navbar'); ?>
         </div>
 
-
-
-        <div class="px-10 py-10">
-            <h1 class="text-2xl font-bold text-slate-800">Dashboard</h1>
-
-            <?php echo $this->uri->segment(1); ?>
+        <div class="p-4 pt-[100px] md:px-10 py-[100px]">
+            <h1 class="text-md md:text-2xl font-bold text-slate-800">Dashboard</h1>
 
             <div class="mt-4">
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid md:grid-cols-3 gap-4">
                     <div class="shadow-md p-4 px-4 bg-white rounded-md border-2 border-[#e3e3e3]">
                         <div class="flex items-center text-xl">
                             <i class="far fa-users mr-2"></i>

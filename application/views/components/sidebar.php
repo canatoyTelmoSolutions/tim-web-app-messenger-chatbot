@@ -1,8 +1,8 @@
 
 
-<div class="bg-[#0E194F] h-screen  p-4 w-screen md:w-[400px] lg:w-[250px] shadow-2xl">
+<div id="sidebar" class="fixed z-50 -left-[1000px] md:left-0 bg-[#0E194F] h-screen min-h-fit overflow-y-auto p-4 w-full md:w-[250px] shadow-2xl">
     <div class="">
-        <div class="grid grid-cols-2 gap-4 p-4">
+        <div class="hidden md:grid grid-cols-2 gap-4 p-4">
             <div class="bg-white p-1 w-fit h-fit">
                 <img 
                     src="<?php echo base_url('assets/images/img_landing_page.png'); ?>" 
@@ -15,7 +15,14 @@
                 <p class="text-xs">SOLUTIONS</p>
             </div>
         </div>
-        <hr>
+        <hr class="hidden md:block">
+
+        <div class="md:hidden flex items-center justify-between text-white">
+            <div class="">TELMO</div>
+            <div onclick="closeNav()" class="block md:hidden bg-[#212A64] transition-all cursor-pointer rounded-full grid place-items-center w-[40px] h-[40px]">
+                <i class="fal fa-times font-bold"></i>
+            </div>
+        </div>
 
         <div class="text-white">
             <div class="mt-10">
