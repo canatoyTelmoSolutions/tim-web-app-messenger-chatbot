@@ -9,4 +9,4 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="bg-[#F3F4F6]">

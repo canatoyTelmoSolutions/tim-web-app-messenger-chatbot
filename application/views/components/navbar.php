@@ -1,6 +1,6 @@
 
 
-<div class="flex justify-between items-center shadow-md p-3 px-10">
+<div class="flex justify-between items-center shadow-md p-3 px-10 bg-white">
     <div class=""></div>
     <div class="flex items-center">
         <div class="relative mr-5">

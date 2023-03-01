@@ -1,6 +1,6 @@
 
 
-<div class="bg-[#0E194F] h-screen  p-4 w-screen md:w-[400px] lg:w-[250px]">
+<div class="bg-[#0E194F] h-screen  p-4 w-screen md:w-[400px] lg:w-[250px] shadow-2xl">
     <div class="">
         <div class="grid grid-cols-2 gap-4 p-4">
             <div class="bg-white p-1 w-fit h-fit">
