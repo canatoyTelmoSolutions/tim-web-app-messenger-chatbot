@@ -1,4 +1,6 @@
 <?php
+
+
 /**
  * CodeIgniter
  *
@@ -38,6 +40,8 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+#[AllowDynamicProperties]
 /**
  * Database Driver Class
  *
