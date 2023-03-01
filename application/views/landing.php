@@ -9,17 +9,17 @@
 
 			<div class="flex items-center font-bold">
 				<div class="cursor-pointer hover:text-gray transition-all">Login</div>
-				<div class="bg-[#212A64] ml-4 py-2 px-4 rounded-md cursor-pointer hover:bg-[#212A80] transition-all">Sign Up</div>
+				<a href="<?php echo site_url('/auth'); ?>" class="bg-[#212A64] ml-4 py-2 px-4 rounded-md cursor-pointer hover:bg-[#212A80] transition-all">Sign Up</a>
 			</div>
 		</div>
 	</div>
 
 	<div class="">
-		<div class="mt-[100px]">
+		<div class="mt-[50px]">
 			<img 
 				src="<?php echo base_url('assets/images/img_landing_page.png'); ?>"
 			 	alt=""
-				class="w-[500px] mx-auto"
+				class="w-[400px] mx-auto"
 				>
 		</div>
 	</div>
