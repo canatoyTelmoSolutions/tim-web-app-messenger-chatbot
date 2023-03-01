@@ -1,7 +1,7 @@
 
 
 <div class="flex justify-between items-center shadow-md p-3 px-10 bg-white">
-    <div class=""></div>
+    <div class="">TELMO</div>
     <div class="flex items-center">
         <div class="relative mr-5">
             <input type="text" placeholder="Search" class="bg-[#EDEDED] placeholder:text-slate-600 p-2 pr-2 text-sm rounded-2xl pl-8 outline-none border-none">
