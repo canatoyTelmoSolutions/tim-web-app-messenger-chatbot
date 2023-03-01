@@ -47,9 +47,14 @@ class Migration_User extends CI_Migration {
                 'constraint' => '100'
            ),
            'password' => array(
-            'type' => 'VARCHAR',
-            'constraint' => '100'
-        ),
+                'type' => 'VARCHAR',
+                'constraint' => '100'
+            ),
+            'role' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+                'null' => TRUE
+            ),
         ));
 
         $this->dbforge->add_key('id', TRUE);
