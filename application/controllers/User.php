@@ -7,17 +7,28 @@ class User extends CI_Controller
 
 	public function __construct()
 	{
-
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->load->model('UserModel');
-		$this->load->database();
 	}
 
-	public function validation()
+	public function validation($inserting = true, $id = null)
 	{
+		$mobile_number_rule = 'required|min_length[11]|max_length[11]';
+		$email_rule = 'required|valid_email';
+
+		if ($id and !$inserting) {
+			$existing_user = $this->UserModel->select('id', $id);
+			$existing_mobile = $existing_user['mobile_number'];
+			$existing_email = $existing_user['email'];
+
+			// is_unique[] rule will only be added if users's mobile/email has new value
+			$email_rule = $existing_email == $this->input->post('email') ? '' : $email_rule . '|is_unique[users.email]';
+			$mobile_number_rule = $existing_mobile == $this->input->post('number') ? '' : $mobile_number_rule . '|is_unique[users.mobile_number]';
+		}
+
 		$this->form_validation->set_rules('firstname', 'First Name', 'required|max_length[255]');
 		$this->form_validation->set_rules('lastname', 'Last Name', 'required|max_length[255]');
 		$this->form_validation->set_rules('age', 'Age', 'required');
@@ -26,12 +37,12 @@ class User extends CI_Controller
 		$this->form_validation->set_rules(
 			'number',
 			'Mobile number',
-			'required|min_length[11]|max_length[11]|is_unique[users.mobile_number]'
+			$mobile_number_rule
 		);
 		$this->form_validation->set_rules(
 			'email',
 			'Email',
-			'required|valid_email|is_unique[users.email]'
+			$email_rule
 		);
 	}
 
@@ -48,10 +59,12 @@ class User extends CI_Controller
 
 	public function store()
 	{
-		$this->validation();
+		$this->validation(true);
 
 		if ($this->form_validation->run()) {
 			$this->UserModel->create();
+
+			$data['users'] = $this->UserModel->index();
 			redirect(site_url('/user'));
 		} else {
 			$this->create();
@@ -66,7 +79,7 @@ class User extends CI_Controller
 
 	public function update($id)
 	{
-		$this->validation();
+		$this->validation(false, $id);
 
 		if ($this->form_validation->run()) {
 			$this->UserModel->update($id);
