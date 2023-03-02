@@ -2,7 +2,7 @@
 
 
 
-<div class="">
+<div class="bg-gradient-to-r from-white via-blue-200 to-blue-500 min-h-fit h-screen">
 	<div class="">
 		<div class="flex justify-between pt-1 px-2 pl-0 text-white items-center max-w-[1200px] mx-auto">
 			<div class="">
@@ -14,7 +14,7 @@
 			</div>
 
 			<div class="flex items-center font-bold">
-				<a href="<?php echo site_url('/auth'); ?>" class="cursor-pointer text-[#FD810E] font-bold hover:text-gray transition-all">Login</a>
+				<a href="<?php echo site_url('/auth'); ?>" class="cursor-pointer text-white font-bold hover:text-gray transition-all">Login</a>
 				<a href="<?php echo site_url('/auth'); ?>" class="bg-[#212A64] ml-4 py-2 px-4 rounded-md cursor-pointer hover:bg-[#212A80] transition-all">Sign Up</a>
 			</div>
 		</div>
@@ -27,12 +27,12 @@
 				<div class="font-bold text-[76px]">Business Our</div>
 				<div class="text-[#FD810E] font-bold text-[106px]">SOLUTION</div>
 
-				<p class="font-semibold mt-4">Fostering Innovation in Business</p>
+				<p class="mb-10 font-semibold mt-4">Fostering Innovation in Business</p>
 
-				<div class="mt-10 font-bold text-white bg-[#0E194F] rounded-2xl py-3 px-6 w-fit hover:bg-slate-800 transition-all cursor-pointer">
+				<a href="<?php echo site_url('/auth'); ?>" class="font-bold text-white bg-[#0E194F] rounded-2xl py-3 px-6 w-fit hover:bg-slate-800 transition-all cursor-pointer">
 					<span>Get Started</span>
 					<i class="fal fa-arrow-right ml-4"></i>
-				</div>
+				</a>
 			</div>
 			<div class="">
 				<img 
