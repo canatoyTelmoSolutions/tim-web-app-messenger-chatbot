@@ -4,6 +4,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class UserModel extends CI_Model {
 
+    public function get_users() {
+        $this->load->helper('url');
+        $this->load->database();
+
+        $this->db->select("*");
+		$this->db->from("users");
+
+		$result = $this->db->get();
+
+        return $result->result();
+    }
+
 	public function create() {
 		$this->load->helper('url');
         $this->load->database();
@@ -22,4 +34,13 @@ class UserModel extends CI_Model {
 
 		return $this->db->insert('users', $data);
 	}
+
+    public function delete() {
+        $this->load->helper('url');
+        $this->load->database();
+	
+		$this->db->where('id', $this->uri->segment(3));
+		
+		return $this->db->delete('users');	
+    }
 }

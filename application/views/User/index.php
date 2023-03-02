@@ -29,16 +29,22 @@
                         </tr>
                     </thead>
                     <tbody class="block md:table-row-group">
+                    <?php 
+                        foreach ($users as $row) {
+                        ?>
+
                         <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
-                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Name</span>Jamal Rios</td>
-                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">User Name</span>jrios1</td>
-                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Email Address</span>jrios@icloud.com</td>
-                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>582-3X2-6233</td>
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Name</span><?php echo $row->firstname . ' ' . $row->lastname ?></td>
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">User Name</span>default</td>
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Email Address</span><?php echo $row->email ?></td>
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>582-3X2-623<?php echo $row->mobile_number ?></td>
                             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                                 <span class="inline-block w-1/3 md:hidden font-bold">Actions</span>
                                 <a href="<?php echo site_url('/user/edit'); ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded"><i class="fad fa-edit"></i></a>
-                                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded"><i class="fad fa-trash"></i></button>
+                                <a href="<?php echo site_url('/user/delete/' . $row->id . ' '); ?>" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded"><i class="fad fa-trash"></i></a>
                             </td>	
+
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
