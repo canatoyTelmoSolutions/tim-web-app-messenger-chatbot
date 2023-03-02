@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="<?php echo base_url(); ?>/assets/css/custom.css" rel="stylesheet" type="text/css" />
-    <script type = 'text/javascript' src = "<?php echo base_url(); ?>/assets/js/sidebar.js"></script>
+    <script type='text/javascript' src="<?php echo base_url(); ?>/assets/js/sidebar.js"></script>
     <title>TIM - Chatbot</title>
 </head>
 
