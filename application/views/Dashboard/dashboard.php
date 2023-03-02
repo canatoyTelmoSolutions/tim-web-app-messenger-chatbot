@@ -9,7 +9,7 @@
             <?php $this->load->view('components/navbar'); ?>
         </div>
 
-        <div class="p-4 pt-[100px] md:px-10 py-[100px]">
+        <div class="p-4 pt-[100px] md:px-10 py-[100px] cursor-default">
             <h1 class="text-md md:text-2xl font-bold text-slate-800">Dashboard</h1>
 
             <div class="mt-4">

@@ -1,5 +1,3 @@
-
-
 <div id="sidebar" class="fixed z-50 -left-[1000px] md:left-0 bg-[#0E194F] h-screen min-h-fit overflow-y-auto p-4 w-full md:w-[250px] shadow-2xl">
     <div class="">
         <div class="hidden md:grid grid-cols-2 gap-4 p-4">
@@ -10,12 +8,12 @@
                     class="w-[80px] mx-auto"
                     >
             </div>
-            <div class="text-white my-auto">
+            <div class="text-white my-auto cursor-default">
                 <h1 class="font-bold text-xl">TELMO</h1>
                 <p class="text-xs">SOLUTIONS</p>
             </div>
         </div>
-        <hr class="hidden md:block">
+        <hr class="hidden md:block" style="background-color: #00FFE0; height: 2px; margin-left: 10px; border: none; ">
 
         <div class="md:hidden flex items-center justify-between text-white">
             <div class="">TELMO</div>
@@ -50,7 +48,10 @@
                 </div>
             </div>
 
-            <div class="mt-10">
+			<br>
+			<hr class="hidden md:block" style="background-color: #00FFE0; height: 2px; margin-left: 10px; border: none; ">
+
+            <div class="mt-4">
                 <h1 class="text-gray-400 text-sm">ACCOUNT</h1>
 
                 <div class="mt-3 grid gap-2">
