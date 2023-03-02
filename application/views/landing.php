@@ -2,7 +2,7 @@
 
 
 
-<div class="bg-gradient-to-r from-white via-blue-200 to-blue-500 min-h-fit h-screen">
+<div class="bg-gradient-to-br from-white via-sky-100 to-indigo-800 min-h-fit h-screen">
 	<div class="">
 		<div class="flex justify-between pt-1 px-2 pl-0 text-white items-center max-w-[1200px] mx-auto">
 			<div class="">
@@ -14,7 +14,7 @@
 			</div>
 
 			<div class="flex items-center font-bold">
-				<a href="<?php echo site_url('/auth'); ?>" class="cursor-pointer text-white font-bold hover:text-gray transition-all">Login</a>
+				<a href="<?php echo site_url('/auth'); ?>" class="cursor-pointer text-[#212A64] font-bold hover:text-gray transition-all">Login</a>
 				<a href="<?php echo site_url('/auth'); ?>" class="bg-[#212A64] ml-4 py-2 px-4 rounded-md cursor-pointer hover:bg-[#212A80] transition-all">Sign Up</a>
 			</div>
 		</div>
