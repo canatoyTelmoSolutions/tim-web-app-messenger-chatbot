@@ -9,10 +9,10 @@
             <?php $this->load->view('components/navbar'); ?>
         </div>
 
-        <div class="p-4 pt-[100px] md:px-10 py-[100px] max-w-[500px] mx-auto">
+        <div class="p-4 pt-[100px] md:px-10 py-[100px] max-w-[550px] mx-auto">
             <h1 class="text-2xl font-bold text-slate-800">Edit</h1>
 
-            <div class="mt-5 bg-white p-4 rounded-md shadow-md">
+            <div class="mt-5 bg-white p-4 rounded-md shadow-md p-6">
                 <form action="" class="grid gap-x-6 gap-y-4">
                     <div class="">
                         <p class="text-sm mb-1">First name</p>
@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="">
-                        <p class="text-sm mb-1">First name</p>
+                        <p class="text-sm mb-1">Last name</p>
                         <input type="text" placeholder="Last name" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
                     </div>
 
