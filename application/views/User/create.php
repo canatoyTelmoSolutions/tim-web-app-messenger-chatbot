@@ -17,38 +17,38 @@
 
             <div class="mt-5 bg-white p-4 rounded-md shadow-md">
 
-            <?php echo form_open('User/store'); ?>
+            <?php echo form_open('user/create'); ?>
                 <div class="grid gap-x-6 gap-y-4">
 
 
                     <div class="">
                         <p class="text-sm mb-1">First name</p>
-                        <input type="text" name="firstname" placeholder="First name" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
+                        <input type="text" name="firstname" placeholder="First name" required class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
                     </div>
 
                     <div class="">
                         <p class="text-sm mb-1">First name</p>
-                        <input type="text" name="lastname" laceholder="Last name" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
+                        <input type="text" name="lastname" placeholder="Last name" required class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">
                         <div class="">
                             <p class="text-sm mb-1">Age</p>
-                            <input type="number" name="age" placeholder="Age" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
+                            <input type="number" name="age" placeholder="Age" required class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
                         </div>
                         <div class="">
                             <p class="text-sm mb-1">Gender</p>
-                            <select name="" id="" name="gender" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
-                                <option value="">Male</option>
-                                <option value="">Female</option>
-                                <option value="">Others</option>
+                            <select id="" name="gender" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">Others</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="">
                         <p class="text-sm mb-1">Mobile number</p>
-                        <input type="text" name="number" placeholder="Mobile number" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
+                        <input type="number" name="number" placeholder="Mobile number" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
                     </div>
 
                     <div class="">
@@ -58,7 +58,7 @@
 
                     <div class="">
                         <p class="text-sm mb-1">Email</p>
-                        <input type="text" name="email" placeholder="Email" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
+                        <input type="email" name="email" placeholder="Email" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
                     </div>
 
                     <button type="submit" class="w-full px-3 py-2 bg-[#0E194F] text-white outline-none rounded-md text-sm">Create</button>

@@ -4,7 +4,7 @@
     <div class="font-bold cursor-default">TIM - Prototype</div>
     <div class="flex items-center">
         <div class="relative mr-5">
-            <input type="text" placeholder="Search" class="hidden md:block bg-[#EDEDED] placeholder:text-slate-600 p-2 pr-2 text-sm rounded-2xl pl-8 outline-none border-none">
+            <input type="search" placeholder="Search" class="hidden md:block bg-[#EDEDED] placeholder:text-slate-600 p-2 pr-2 text-sm rounded-2xl pl-8 outline-none border-none">
             <i class="fal fa-search absolute left-[10px] top-[10px] text-sm hidden md:block"></i>
         </div>
         <div class="">
