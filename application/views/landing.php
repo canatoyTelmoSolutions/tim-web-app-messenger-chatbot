@@ -4,8 +4,8 @@
 
 <div class="">
 	<div class="bg-[#13005A]">
-		<div class="flex justify-between py-4 text-white items-center max-w-[1200px] mx-auto">
-			<div class="font-bold text-2xl">Telmo Chatbot</div>
+		<div class="flex justify-between py-4 px-2 text-white items-center max-w-[1200px] mx-auto">
+			<div class="font-bold text-sm md:text-2xl">Telmo Chatbot</div>
 
 			<div class="flex items-center font-bold">
 				<a href="<?php echo site_url('/auth'); ?>" class="cursor-pointer hover:text-gray transition-all">Login</a>
