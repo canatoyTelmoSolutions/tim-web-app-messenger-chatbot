@@ -9,4 +9,3 @@ function openNav() {
   function closeNav() {
     document.getElementById("sidebar").style.left = "-1000px";
   }
-  
