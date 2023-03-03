@@ -12,6 +12,11 @@ class User extends CI_Controller
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->load->model('UserModel');
+		$this->load->model('AuthModel');
+
+		if (!$this->AuthModel->user()) {
+			redirect(base_url('/login'));
+		}
 	}
 
 	public function validation($inserting = true, $id = null)

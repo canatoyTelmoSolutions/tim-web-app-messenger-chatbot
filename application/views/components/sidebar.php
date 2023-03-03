@@ -69,26 +69,25 @@
                 <h1 class="text-gray-400 text-sm">ACCOUNT</h1>
 
                 <div class="mt-3 grid gap-2">
-                    <a href="<?php echo site_url('/setting'); ?>" class="group relative grid grid-cols-[30px_1fr] items-center p-2 cursor-pointer hover:bg-[#212A64] rounded-md transition-all hover:p-2 hover:px-3 hover:shadow-md <?php if ($this->uri->segment(1) == "setting") {
-                                                                                                                                                                                                                                        echo "bg-[#212A64] px-3 ";
-                                                                                                                                                                                                                                    } ?>">
+                    <a href="<?php echo site_url('/setting'); ?>" class="group relative grid grid-cols-[30px_1fr] items-center p-2 cursor-pointer hover:bg-[#212A64] rounded-md transition-all hover:p-2 hover:px-3 hover:shadow-md 
+                    <?php if ($this->uri->segment(1) == "setting") {
+                        echo "bg-[#212A64] px-3 ";
+                    } ?>">
                         <i class="fal fa-cog"></i>
                         <h2 class="text-sm">Settings</h2>
 
-                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "setting") {
-                                                                                                                                            echo "block";
-                                                                                                                                        } else {
-                                                                                                                                            echo "hidden";
-                                                                                                                                        } ?>">l</div>
+                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block 
+                        <?php if ($this->uri->segment(1) == "setting") {
+                            echo "block";
+                        } else {
+                            echo "hidden";
+                        } ?>">l</div>
                     </a>
-                    <div class="group relative grid grid-cols-[30px_1fr] items-center p-2 cursor-pointer hover:bg-[#212A64] rounded-md transition-all hover:p-2 hover:px-3 hover:shadow-md">
+                    <a href="<?php echo base_url('/logout'); ?>" class="group relative grid grid-cols-[30px_1fr] items-center p-2 cursor-pointer hover:bg-[#212A64] rounded-md transition-all hover:p-2 hover:px-3 hover:shadow-md">
                         <i class="fal fa-sign-out"></i>
                         <h2 class="text-sm">Logout</h2>
-
-                        <div class="absolute hidden right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "dashboard") {
-                                                                                                                                                    echo "block";
-                                                                                                                                                } ?>">l</div>
-                    </div>
+                        <div class="absolute hidden right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block">l</div>
+                    </a>
                 </div>
             </div>
         </div>

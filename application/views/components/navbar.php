@@ -17,10 +17,19 @@
                     <i class="fal fa-bars font-bold"></i>
                 </div>
 
-                <div class="leading-none hidden md:block">
-                    <h2 class="font-bold text-md">Lorem</h2>
-                    <p class="text-xs">Admin</p>
-                </div>
+                <?php if ($this->session->has_userdata('authenticated')) : ?>
+                    <div class="leading-none hidden md:block">
+                        <h2 class="font-bold text-md">
+                            <?php
+                            echo "{$this->session->userdata('user')['lastname']}, 
+                            {$this->session->userdata('user')['firstname']}";
+                            ?>
+                        </h2>
+                        <p class="text-xs">
+                            <?php echo $this->session->userdata('user')['role']; ?>
+                        </p>
+                    </div>
+                <?php endif ?>
             </div>
         </div>
     </div>

@@ -57,3 +57,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['search']['GET'] = 'user/search/';
+
+$route['login']['GET'] = 'auth/index';
+$route['login']['POST'] = 'auth/authenticate';
+
+$route['logout']['GET'] = 'auth/invalidateSessions';

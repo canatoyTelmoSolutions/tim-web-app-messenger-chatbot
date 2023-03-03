@@ -11,6 +11,11 @@ class Dashboard extends CI_Controller
         parent::__construct();
         $this->load->helper('url');
         $this->load->model('UserModel');
+        $this->load->model('AuthModel');
+
+        if (!$this->AuthModel->user()) {
+            redirect(base_url('/login'));
+        }
     }
 
     public function index()
