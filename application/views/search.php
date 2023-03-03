@@ -15,22 +15,22 @@
                 Showing (<?php echo number_format(count($users != NULL ? $users : [])); ?>) results for "<?php echo $q; ?>"
             </p>
 
-            <?php if ($users != NULL) : ?>
-            <div class="mt-4">
-                <div class="mt-10 bg-white shadow-lg rounded-md border-2 border-[#e3e3e3] p-3">
-                    <div class="">
-                        <!-- component -->
-                        <table class="min-w-full border-collapse block md:table text-sm ">
-                            <thead class="block md:table-header-group">
-                                <tr class="border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
-                                    <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Name</th>
-                                    <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">User Name</th>
-                                    <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Email Address</th>
-                                    <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Mobile</th>
-                                </tr>
-                            </thead>
-                            <div class="">
-                                <tbody class="block md:table-row-group overflow-scroll h-[200px]">
+            <?php if ($users) : ?>
+                <div class="mt-4">
+                    <div class="mt-10 bg-white shadow-lg rounded-md border-2 border-[#e3e3e3] p-3">
+                        <div class="">
+                            <!-- component -->
+                            <table class="min-w-full border-collapse block md:table text-sm ">
+                                <thead class="block md:table-header-group">
+                                    <tr class="border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
+                                        <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Name</th>
+                                        <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">User Name</th>
+                                        <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Email Address</th>
+                                        <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Mobile</th>
+                                    </tr>
+                                </thead>
+                                <div class="">
+                                    <tbody class="block md:table-row-group overflow-scroll h-[200px]">
                                         <?php foreach ($users as $user) : ?>
                                             <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
                                                 <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
@@ -51,12 +51,12 @@
                                                 </td>
                                             </tr>
                                         <?php endforeach ?>
-                                </tbody>
-                            </div>
-                        </table>
+                                    </tbody>
+                                </div>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php endif ?>
         </div>
     </div>
