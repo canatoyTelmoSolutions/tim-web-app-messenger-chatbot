@@ -51,13 +51,15 @@ class User extends CI_Controller
 
 	public function index()
 	{
+		$data['title'] = 'Users';
 		$data['users'] = $this->UserModel->index();
 		$this->load->view('User/index', $data);
 	}
 
 	public function create()
 	{
-		$this->load->view('User/create');
+		$data['title'] = 'Create user';
+		$this->load->view('User/create', $data);
 	}
 
 	public function store()
@@ -76,6 +78,7 @@ class User extends CI_Controller
 
 	public function edit($id)
 	{
+		$data['title'] = 'Edit user';
 		$data['user'] = $this->UserModel->select('id', $id);
 		$this->load->view('User/edit', $data);
 	}

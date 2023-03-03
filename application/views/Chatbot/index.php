@@ -10,7 +10,7 @@
         </div>
 
         <div class="p-4 pt-[100px] md:px-10 py-[100px]">
-            <h1 class="text-2xl font-bold text-slate-800">Chatbot</h1>
+            <h1 class="text-2xl font-bold text-slate-800">Chatbot Settings</h1>
 
             <div class=""></div>
         </div>
