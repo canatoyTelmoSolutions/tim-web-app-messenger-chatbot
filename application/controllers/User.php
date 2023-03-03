@@ -51,6 +51,7 @@ class User extends CI_Controller
 
 	public function index()
 	{
+		$data['title'] = 'Users';
 		$data['users'] = $this->UserModel->index();
 		$this->load->view('User/index', $data);
 	}

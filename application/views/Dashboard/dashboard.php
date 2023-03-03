@@ -22,7 +22,7 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F] card1">300000</div>
+                            <div class="font-bold text-6xl text-[#0E194F]"><?php echo $users; ?></div>
                         </div>
                     </div>
                     <div class="shadow-md p-4 bg-white rounded-md border-2 border-[#e3e3e3]">
@@ -33,7 +33,7 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F] card2">27</div>
+                            <div class="font-bold text-6xl text-[#0E194F]"><?php echo $users; ?></div>
                         </div>
                     </div>
                     <div class="shadow-md p-4 bg-white rounded-md border-2 border-[#e3e3e3]">
@@ -44,7 +44,7 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F] card3">30</div>
+                            <div class="font-bold text-6xl text-[#0E194F]"><?php echo $users; ?></div>
                         </div>
                     </div>
                 </div>
@@ -87,48 +87,44 @@
 
                 <div class="mt-10 bg-white shadow-lg rounded-md border-2 border-[#e3e3e3] p-3">
 
-                <h1 class="font-bold mb-2 text-slate-800">Recently added</h1>
+                    <h1 class="font-bold mb-2 text-slate-800">Recently added</h1>
 
                     <div class="">
                         <!-- component -->
                         <table class="min-w-full border-collapse block md:table text-sm">
-                                <thead class="block md:table-header-group">
-                                    <tr class="border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
-                                        <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Name</th>
-                                        <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">User Name</th>
-                                        <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Email Address</th>
-                                        <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Mobile</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="block md:table-row-group">
-                                    <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Name</span>Jamal Rios</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">User Name</span>jrios1</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Email Address</span>jrios@icloud.com</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>582-3X2-6233</td>
-
-                                    </tr>
-                                    <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Name</span>Erwin Campbell</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">User Name</span>ecampbell088</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Email Address</span>ecampbell088@hotmail.com</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>318-685-X414</td>
-
-                                    </tr>
-                                    <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Name</span>Lillie Clark</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">User Name</span>lillie</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Email Address</span>lillie.clark@gmail.com</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>505-644-84X4</td>
-                                    </tr>
-                                    <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Name</span>Maribel Koch</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">User Name</span>maribelkoch</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Email Address</span>mkoch@yahoo.com</td>
-                                        <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>582-400-3X36</td>
-                                    </tr>			
-                                </tbody>
-                            </table>
+                            <thead class="block md:table-header-group">
+                                <tr class="border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
+                                    <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Name</th>
+                                    <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">User Name</th>
+                                    <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Email Address</th>
+                                    <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Mobile</th>
+                                </tr>
+                            </thead>
+                            <tbody class="block md:table-row-group">
+                                <?php if ($recent_users) : ?>
+                                    <?php foreach ($recent_users as $user) : ?>
+                                        <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
+                                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                                <span class="inline-block w-1/3 md:hidden font-bold">Name</span>
+                                                <?php echo "{$user['firstname']} {$user['lastname']}" ?>
+                                            </td>
+                                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                                <span class="inline-block w-1/3 md:hidden font-bold">User Name</span>
+                                                <?php echo $user['username'] ?>
+                                            </td>
+                                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                                <span class="inline-block w-1/3 md:hidden font-bold">Email Address</span>
+                                                <?php echo $user['email'] ?>
+                                            </td>
+                                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                                <span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>
+                                                <?php echo $user['mobile_number'] ?>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach ?>
+                                <?php endif ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
