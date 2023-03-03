@@ -41,7 +41,7 @@
 
 <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <!-- <form action="#">
+             <form action="#">
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -61,9 +61,11 @@
                     <input type="password" placeholder="Password" />
                     <label></label>
                 </div>
-                <button>Sign Up</button>
-            </form> -->
+               <a href="<?=base_url();?>">Sign Up</a> 
+            </form>
         </div>
+
+        
 <div class="overlay-container" id="overlayCon">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
@@ -73,7 +75,7 @@
                     <img src="assets/images/telmo.svg" alt="">
                 </div>
             </div>
-            <button id="overlayBtn"></button>
+            <button id="overlayBtn">Sign or Login</button>
         </div>
     </div>
 
