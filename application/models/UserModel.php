@@ -22,7 +22,7 @@ class UserModel extends CI_Model
             'address' => $this->input->post('address'),
             'username' => $this->input->post('email'),
             'email' => $this->input->post('email'),
-            'password' => password_hash('admin', PASSWORD_ARGON2I),
+            'password' => password_hash('admin', PASSWORD_DEFAULT),
             'role' => 'user'
         );
 
