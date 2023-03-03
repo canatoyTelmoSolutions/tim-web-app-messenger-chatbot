@@ -16,7 +16,7 @@ class Dashboard extends CI_Controller
     public function index()
     {
         $data['title'] = 'Dashboard';
-        $data['users'] = count($this->UserModel->index() ? $this->UserModel->index() : 0);
+        $data['users'] = $this->UserModel->index() ? count($this->UserModel->index()) : null;
         $data['recent_users'] = $this->UserModel->recent();
         $this->load->view('Dashboard/dashboard', $data);
     }

@@ -22,7 +22,8 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F] card1"><?php echo $users; ?></div>
+                            <div class="font-bold text-6xl text-[#0E194F] card1"><?php if ($users) echo $users;
+                                                                                    else echo '0'; ?></div>
                         </div>
                     </div>
                     <div class="shadow-md p-4 bg-white rounded-md border-2 border-[#e3e3e3]">
@@ -33,7 +34,8 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F] card2"><?php echo $users; ?></div>
+                            <div class="font-bold text-6xl text-[#0E194F] card2"><?php if ($users) echo $users;
+                                                                                    else echo '0'; ?></div>
                         </div>
                     </div>
 
@@ -45,46 +47,53 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F] card3"><?php echo $users; ?></div>
+                            <div class="font-bold text-6xl text-[#0E194F] card3"><?php if ($users) echo $users;
+                                                                                    else echo '0'; ?></div>
                         </div>
                     </div>
                 </div>
 
-				<!-- I Add a here the script because it is not running when i pasted on Dashboard js  -->
-				<script>
-					// this is the script of the first card
-					$({ Counter: 0 }).animate({
-						Counter: $('.card1').text()
-					}, {
-						duration: 5000,
-						easing: 'swing',
-						step: function() {
-							$('.card1').text(Math.ceil(this.Counter));
-						}
-					});
+                <!-- I Add a here the script because it is not running when i pasted on Dashboard js  -->
+                <script>
+                    // this is the script of the first card
+                    $({
+                        Counter: 0
+                    }).animate({
+                        Counter: $('.card1').text()
+                    }, {
+                        duration: 5000,
+                        easing: 'swing',
+                        step: function() {
+                            $('.card1').text(Math.ceil(this.Counter));
+                        }
+                    });
 
-					// this is the script of the second card
-					$({ Counter: 0 }).animate({
-						Counter: $('.card2').text()
-					}, {
-						duration: 3000,
-						easing: 'swing',
-						step: function() {
-							$('.card2').text(Math.ceil(this.Counter));
-						}
-					});
+                    // this is the script of the second card
+                    $({
+                        Counter: 0
+                    }).animate({
+                        Counter: $('.card2').text()
+                    }, {
+                        duration: 3000,
+                        easing: 'swing',
+                        step: function() {
+                            $('.card2').text(Math.ceil(this.Counter));
+                        }
+                    });
 
-					// this is the script of the third card
-					$({ Counter: 0 }).animate({
-						Counter: $('.card3').text()
-					}, {
-						duration: 3000,
-						easing: 'swing',
-						step: function() {
-							$('.card3').text(Math.ceil(this.Counter));
-						}
-					});
-				</script>
+                    // this is the script of the third card
+                    $({
+                        Counter: 0
+                    }).animate({
+                        Counter: $('.card3').text()
+                    }, {
+                        duration: 3000,
+                        easing: 'swing',
+                        step: function() {
+                            $('.card3').text(Math.ceil(this.Counter));
+                        }
+                    });
+                </script>
 
                 <div class="mt-10 bg-white shadow-lg rounded-md border-2 border-[#e3e3e3] p-3">
 
@@ -102,30 +111,30 @@
                                 </tr>
                             </thead>
                             <div class="">
-                            <tbody class="block md:table-row-group overflow-scroll h-[200px]">
-                                <?php if ($recent_users) : ?>
-                                    <?php foreach ($recent_users as $user) : ?>
-                                        <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
-                                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                                <span class="inline-block w-1/3 md:hidden font-bold">Name</span>
-                                                <?php echo "{$user['firstname']} {$user['lastname']}" ?>
-                                            </td>
-                                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                                <span class="inline-block w-1/3 md:hidden font-bold">User Name</span>
-                                                <?php echo $user['username'] ?>
-                                            </td>
-                                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                                <span class="inline-block w-1/3 md:hidden font-bold">Email Address</span>
-                                                <?php echo $user['email'] ?>
-                                            </td>
-                                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                                <span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>
-                                                <?php echo $user['mobile_number'] ?>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach ?>
-                                <?php endif ?>
-                            </tbody>
+                                <tbody class="block md:table-row-group overflow-scroll h-[200px]">
+                                    <?php if ($recent_users) : ?>
+                                        <?php foreach ($recent_users as $user) : ?>
+                                            <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
+                                                <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                                    <span class="inline-block w-1/3 md:hidden font-bold">Name</span>
+                                                    <?php echo "{$user['firstname']} {$user['lastname']}" ?>
+                                                </td>
+                                                <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                                    <span class="inline-block w-1/3 md:hidden font-bold">User Name</span>
+                                                    <?php echo $user['username'] ?>
+                                                </td>
+                                                <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                                    <span class="inline-block w-1/3 md:hidden font-bold">Email Address</span>
+                                                    <?php echo $user['email'] ?>
+                                                </td>
+                                                <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                                    <span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>
+                                                    <?php echo $user['mobile_number'] ?>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach ?>
+                                    <?php endif ?>
+                                </tbody>
                             </div>
                         </table>
                     </div>
