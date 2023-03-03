@@ -22,7 +22,7 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F]"><?php echo $users; ?></div>
+                            <div class="font-bold text-6xl text-[#0E194F] card1"><?php echo $users; ?></div>
                         </div>
                     </div>
                     <div class="shadow-md p-4 bg-white rounded-md border-2 border-[#e3e3e3]">
@@ -33,9 +33,10 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F]"><?php echo $users; ?></div>
+                            <div class="font-bold text-6xl text-[#0E194F] card2"><?php echo $users; ?></div>
                         </div>
                     </div>
+
                     <div class="shadow-md p-4 bg-white rounded-md border-2 border-[#e3e3e3]">
                         <div class="flex items-center text-xl">
                             <i class="far fa-users mr-2"></i>
@@ -44,7 +45,7 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F]"><?php echo $users; ?></div>
+                            <div class="font-bold text-6xl text-[#0E194F] card3"><?php echo $users; ?></div>
                         </div>
                     </div>
                 </div>

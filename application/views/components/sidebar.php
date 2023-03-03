@@ -9,7 +9,7 @@
                 <p class="text-xs">SOLUTIONS</p>
             </div>
         </div>
-        <hr class="hidden md:block" style="background-color: #00FFE0; height: 2px; margin-left: 10px; border: none; ">
+        <hr class="hidden md:block" style="background-color: #FD810E; height: 2px; margin-left: 10px; border: none; ">
 
         <div class="md:hidden flex items-center justify-between text-white">
             <div class="">TELMO</div>
@@ -29,7 +29,7 @@
                         <i class="fal fa-chart-line"></i>
                         <h2 class="text-sm">Dashboard</h2>
 
-                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#00FFFF] text-[#00FFFF] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "dashboard") {
+                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "dashboard") {
                                                                                                                                             echo "block";
                                                                                                                                         } else {
                                                                                                                                             echo "hidden";
@@ -41,7 +41,7 @@
                         <i class="fal fa-users"></i>
                         <h2 class="text-sm">Users</h2>
 
-                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#00FFFF] text-[#00FFFF] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "user") {
+                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "user") {
                                                                                                                                             echo "block";
                                                                                                                                         } else {
                                                                                                                                             echo "hidden";
@@ -53,7 +53,7 @@
                         <i class="fal fa-robot"></i>
                         <h2 class="text-sm">Chatbot Settings</h2>
 
-                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#00FFFF] text-[#00FFFF] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "chatbot") {
+                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "chatbot") {
                                                                                                                                             echo "block";
                                                                                                                                         } else {
                                                                                                                                             echo "hidden";
@@ -63,7 +63,7 @@
             </div>
 
             <br>
-            <hr class="hidden md:block" style="background-color: #00FFE0; height: 2px; margin-left: 10px; border: none; ">
+            <hr class="hidden md:block" style="background-color: #FD810E; height: 2px; margin-left: 10px; border: none; ">
 
             <div class="mt-4">
                 <h1 class="text-gray-400 text-sm">ACCOUNT</h1>
@@ -75,7 +75,7 @@
                         <i class="fal fa-cog"></i>
                         <h2 class="text-sm">Settings</h2>
 
-                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#00FFFF] text-[#00FFFF] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "setting") {
+                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "setting") {
                                                                                                                                             echo "block";
                                                                                                                                         } else {
                                                                                                                                             echo "hidden";
@@ -85,7 +85,7 @@
                         <i class="fal fa-sign-out"></i>
                         <h2 class="text-sm">Logout</h2>
 
-                        <div class="absolute hidden right-0 w-1 grow h-[10ppx] bg-[#00FFFF] text-[#00FFFF] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "dashboard") {
+                        <div class="absolute hidden right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "dashboard") {
                                                                                                                                                     echo "block";
                                                                                                                                                 } ?>">l</div>
                     </div>
