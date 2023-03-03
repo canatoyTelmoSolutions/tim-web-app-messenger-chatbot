@@ -27,6 +27,9 @@ class User extends CI_Controller
 			// is_unique[] rule will only be added if users's mobile/email has new value
 			$email_rule = $existing_email == $this->input->post('email') ? '' : $email_rule . '|is_unique[users.email]';
 			$mobile_number_rule = $existing_mobile == $this->input->post('number') ? '' : $mobile_number_rule . '|is_unique[users.mobile_number]';
+		} else {
+			$email_rule = $email_rule . '|is_unique[users.email]';
+			$mobile_number_rule = $mobile_number_rule . '|is_unique[users.mobile_number]';
 		}
 
 		$this->form_validation->set_rules('firstname', 'First Name', 'required|max_length[255]');

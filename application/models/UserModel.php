@@ -32,7 +32,10 @@ class UserModel extends CI_Model
     public function index()
     {
         $query = $this->db->get('users');
-        return $query->result_array();
+        if ($query->num_rows()) {
+            return $query->result_array();
+        }
+        return null;
     }
 
     public function select($col, $id)
