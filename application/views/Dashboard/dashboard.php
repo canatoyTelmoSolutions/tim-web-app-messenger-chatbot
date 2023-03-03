@@ -56,7 +56,7 @@
 					$({ Counter: 0 }).animate({
 						Counter: $('.card1').text()
 					}, {
-						duration: 3000,
+						duration: 5000,
 						easing: 'swing',
 						step: function() {
 							$('.card1').text(Math.ceil(this.Counter));
