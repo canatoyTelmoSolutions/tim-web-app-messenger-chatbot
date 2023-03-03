@@ -20,10 +20,13 @@ class Welcome extends CI_Controller
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
 
+
 	public function __construct()
-	{
-		parent::__construct();
-		$this->load->helper('url');
+    {
+        parent::__construct();
+        $this->load->helper('url');
+        $this->load->model('UserModel');
+    
 	}
 
 	public function index()
@@ -31,4 +34,11 @@ class Welcome extends CI_Controller
 		$data['title'] = 'TIM - Chatbot';
 		$this->load->view('landing', $data);
 	}
+
+	
+    public function search()
+    {
+        $data['title'] = 'Search';
+        $this->load->view('/search');
+    }
 }
