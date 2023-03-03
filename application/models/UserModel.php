@@ -38,6 +38,15 @@ class UserModel extends CI_Model
         return null;
     }
 
+    public function recent()
+    {
+        $query = $this->db->order_by('id', 'DESC')->limit(7)->get('users');
+        if ($query->num_rows()) {
+            return $query->result_array();
+        }
+        return null;
+    }
+
     public function select($col, $id)
     {
         $query = $this->db->where($col, $id)->get('users');
