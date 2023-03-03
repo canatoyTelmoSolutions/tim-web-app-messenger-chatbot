@@ -32,7 +32,8 @@
                         </tr>
                     </thead>
                     <tbody class="block md:table-row-group">
-                        <? foreach ($users as $user) : ?>
+
+							<? foreach ($users as $user) : ?>
                             <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
                                 <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                                     <span class="inline-block w-1/3 md:hidden font-bold">Name</span>
@@ -42,7 +43,7 @@
                                     <span class="inline-block w-1/3 md:hidden font-bold">User Name</span>
                                     <? echo $user['username'] ?>
                                 </td>
-                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Age</span>21</td>
+								<td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Age</span>21</td>
                             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Gender</span>Male</td>
                             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Home Address</span>Tacloban City</td>
                                 <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
