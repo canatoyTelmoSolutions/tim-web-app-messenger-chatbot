@@ -100,4 +100,13 @@ class User extends CI_Controller
 		$this->UserModel->destroy($id);
 		redirect(site_url('/user'));
 	}
+
+	public function search()
+	{
+		$q = $this->input->get('q');
+		$users = $this->UserModel->search($q);
+		foreach ($users as $user) {
+			var_dump($user);
+		}
+	}
 }
