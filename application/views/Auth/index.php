@@ -22,9 +22,7 @@
             </div>
             <div class="">
                 <p class="text-sm mb-1">First name</p>
-                <input type="text" name="firstname" placeholder="First name" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
-           
-                
+                <input type="text" name="firstname" placeholder="First name" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">                
                 <div class="flex items-center justify-between mt-1">
                     <div class=""></div>
                     <a href="#" class="text-xs cursor-pointer transition-all">Forget password?</a>
@@ -69,7 +67,7 @@
 <div class="overlay-container" id="overlayCon">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                   <img src="assets/images/login.svg" alt="">
+                <img src="assets/images/login.svg" alt="">
                 </div>
                 <div class="overlay-panel overlay-right">
                     <img src="assets/images/telmo.svg" alt="">

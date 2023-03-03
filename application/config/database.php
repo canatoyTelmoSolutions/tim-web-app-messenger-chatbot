@@ -80,6 +80,7 @@ $db['default'] = array(
 	'password' => '',
 	'database' => 'chatbot',
 	'dbdriver' => 'mysqli',
+	'port' => '3307',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
