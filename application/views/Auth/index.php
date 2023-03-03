@@ -39,7 +39,7 @@
 
 <div class="container" id="container">
         <div class="form-container sign-up-container">
-             <form action="#">
+           <!--  <form action="#">
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -59,9 +59,11 @@
                     <input type="password" placeholder="Password" />
                     <label></label>
                 </div>
-               <a href="<?=base_url();?>">Sign Up</a> 
+                <button>Sign Up</button>
+              
             </form>
         </div>
+        -->
 
         
 <div class="overlay-container" id="overlayCon">
