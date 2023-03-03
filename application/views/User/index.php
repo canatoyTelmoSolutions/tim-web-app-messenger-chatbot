@@ -29,12 +29,14 @@
                         </tr>
                     </thead>
                     <tbody class="block md:table-row-group">
-                        <? if (sizeof($users)) : ?>
-                            <? foreach ($users as $user) : ?>
+                        <?php if (sizeof($users) > 0 || $users != null): ?>
+                            <?php foreach ($users as $user) : ?>
+        
+
                                 <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
                                     <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                                         <span class="inline-block w-1/3 md:hidden font-bold">Name</span>
-                                        <? echo "{$user['firstname']} {$user['lastname']}"; ?>
+                                        <?php echo "{$user['firstname']} {$user['lastname']}"; ?>
                                     </td>
                                     <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                                         <span class="inline-block w-1/3 md:hidden font-bold">User Name</span>
@@ -42,11 +44,11 @@
                                     </td>
                                     <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                                         <span class="inline-block w-1/3 md:hidden font-bold">Email Address</span>
-                                        <? echo $user['email'] ?>
+                                        <?php echo $user['email'] ?>
                                     </td>
                                     <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                                         <span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>
-                                        <? echo $user['mobile_number'] ?>
+                                        <?php echo $user['mobile_number'] ?>
                                     </td>
                                     <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                                         <span class="inline-block w-1/3 md:hidden font-bold">Actions</span>
@@ -58,8 +60,8 @@
                                         <?php echo form_close(); ?>
                                     </td>
                                 </tr>
-                            <? endforeach ?>
-                        <? endif ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </tbody>
                 </table>
             </div>
