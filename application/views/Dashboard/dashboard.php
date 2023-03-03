@@ -101,7 +101,8 @@
                                     <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Mobile</th>
                                 </tr>
                             </thead>
-                            <tbody class="block md:table-row-group">
+                            <div class="">
+                            <tbody class="block md:table-row-group overflow-scroll h-[200px]">
                                 <?php if ($recent_users) : ?>
                                     <?php foreach ($recent_users as $user) : ?>
                                         <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
@@ -125,6 +126,7 @@
                                     <?php endforeach ?>
                                 <?php endif ?>
                             </tbody>
+                            </div>
                         </table>
                     </div>
                 </div>

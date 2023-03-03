@@ -20,4 +20,5 @@ class Dashboard extends CI_Controller
         $data['recent_users'] = $this->UserModel->recent();
         $this->load->view('Dashboard/dashboard', $data);
     }
+
 }
