@@ -11,4 +11,10 @@ class Auth extends CI_Controller
 		$this->load->helper('url');
 		$this->load->view('Auth/index');
 	}
+
+	public function forgotpassword()
+	{
+		$this->load->helper('url');
+		$this->load->view('Auth/forgot');
+	}
 }

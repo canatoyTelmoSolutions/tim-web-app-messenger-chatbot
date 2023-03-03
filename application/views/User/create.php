@@ -66,7 +66,7 @@
 
                     <div class="">
                         <p class="text-sm mb-1">Mobile number</p>
-                        <input type="number" name="number" value="<?php echo set_value('number') ?>" placeholder="Mobile number" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm 
+                        <input type="number" name="number" maxlength="11" value="<?php echo set_value('number') ?>" placeholder="Mobile number" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm 
                         <?php if (form_error('number')) echo 'form_error border border-pink-500'; ?>">
                         <span class="text-xs text-pink-600"><?php echo form_error('number') ?></span>
                     </div>
