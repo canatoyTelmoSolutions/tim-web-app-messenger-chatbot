@@ -1,3 +1,28 @@
+<style>
+	.stage {
+        display: flex;
+        height: 370px;
+        width: 100%;
+    }
+    .box {
+        align-self: flex-end;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        margin: 0 auto 0 auto;
+        transform-origin: bottom;
+        width: 200px;
+    }
+    .bounce-1 {
+        animation-name: bounce-1;
+        animation-timing-function: linear;
+    }
+    @keyframes bounce-1 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+</style>
+
 <?php $this->load->view('components/header'); ?>
 
 
@@ -34,13 +59,13 @@
 					<i class="fal fa-arrow-right ml-2 md:ml-4"></i>
 				</a>
 			</div>
-			<div class="">
+			<div class="stage">
 				<img 
 					src="<?php echo base_url('assets/images/landing_illustration.png'); ?>"
 					alt=""
-					class="w-[500px] mx-auto"
+					class="w-[500px] mx-auto box bounce-1"
 					>
-				</div>
+			</div>
 		</div>
 	</div>
 
