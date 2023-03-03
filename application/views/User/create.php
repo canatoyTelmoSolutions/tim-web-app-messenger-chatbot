@@ -11,8 +11,6 @@
 
         <div class="p-4 pt-[100px] md:px-10 py-[100px] max-w-[500px] mx-auto">
 
-            <?php echo validation_errors(); ?>
-
             <h1 class="text-2xl font-bold text-slate-800">Create User</h1>
 
             <div class="mt-5 bg-white p-4 rounded-md shadow-md">
