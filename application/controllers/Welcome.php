@@ -39,6 +39,7 @@ class Welcome extends CI_Controller
     public function search()
     {
         $data['title'] = 'Search';
-        $this->load->view('/search');
+		$data['users'] = $this->UserModel->index();
+        $this->load->view('/search', $data);
     }
 }

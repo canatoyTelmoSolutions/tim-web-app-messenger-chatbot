@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class=" grid place-items-center">
-        <div class="px-10 w-[400px]">
+        <div class="px-10 w-[600px]">
             <div class="">
             <img src="assets/images/telmo.svg" alt="" class="mx-auto" />    
             </div>
@@ -42,7 +42,7 @@
 <div class=""id="registration-form" style="display:none;">
     <div class=" grid place-items-center h-screen grid grid-cols-[1fr_1000px] flex ">
         <div class=" pl-10 ">
-            <div class="px-10 w-[400px]">
+            <div class="px-10 w-[600px]">
                 <div class="">
                 <img src="assets/images/telmo.svg" alt="" class="mx-auto" />    
                 </div>
@@ -62,8 +62,9 @@
                         <a href="#" class="text-xs cursor-pointer transition-all">Forget password?</a>
                     </div>
                 </div>
-                <button  class="w-full px-3 py-2 bg-[#0E194F] text-white outline-none rounded-md text-sm" id="show-login-form">Login</button>
                 </form>
+                <button  class="w-full px-3 py-2 bg-[#0E194F] text-white outline-none rounded-md text-sm" id="show-login-form">Login</button>
+                
             </div>     
         </div>
         <div class="bg-[#0E194F] w-full h-screen"><img src="<?php echo site_url(); ?> . '/images/login.svg" alt="" class="content-center pt-10  "></div>
