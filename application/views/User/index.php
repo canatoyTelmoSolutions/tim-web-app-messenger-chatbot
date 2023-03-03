@@ -32,39 +32,37 @@
                         </tr>
                     </thead>
                     <tbody class="block md:table-row-group">
-
-							<? foreach ($users as $user) : ?>
-                            <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
-                                <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                    <span class="inline-block w-1/3 md:hidden font-bold">Name</span>
-                                    <? echo "{$user['firstname']} {$user['lastname']}"; ?>
-                                </td>
-                                <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                    <span class="inline-block w-1/3 md:hidden font-bold">User Name</span>
-                                    <? echo $user['username'] ?>
-                                </td>
-								<td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Age</span>21</td>
-                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Gender</span>Male</td>
-                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Home Address</span>Tacloban City</td>
-                                <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                    <span class="inline-block w-1/3 md:hidden font-bold">Email Address</span>
-                                    <? echo $user['email'] ?>
-                                </td>
-                                <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                    <span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>
-                                    <? echo $user['mobile_number'] ?>
-                                </td>
-                                <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                    <span class="inline-block w-1/3 md:hidden font-bold">Actions</span>
-                                    <a href="<?php echo site_url('/user/edit/' . $user['id']); ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded"><i class="fad fa-edit"></i></a>
-                                    <?php echo form_open('/user/delete/' . $user['id']); ?>
-                                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">
-                                        <i class="fad fa-trash"></i>
-                                    </button>
-                                    <?php echo form_close(); ?>
-                                </td>
-                            </tr>
-                        <? endforeach ?>
+                        <? if (sizeof($users)) : ?>
+                            <? foreach ($users as $user) : ?>
+                                <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
+                                    <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                        <span class="inline-block w-1/3 md:hidden font-bold">Name</span>
+                                        <? echo "{$user['firstname']} {$user['lastname']}"; ?>
+                                    </td>
+                                    <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                        <span class="inline-block w-1/3 md:hidden font-bold">User Name</span>
+                                        <? echo $user['username'] ?>
+                                    </td>
+                                    <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                        <span class="inline-block w-1/3 md:hidden font-bold">Email Address</span>
+                                        <? echo $user['email'] ?>
+                                    </td>
+                                    <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                        <span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>
+                                        <? echo $user['mobile_number'] ?>
+                                    </td>
+                                    <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                        <span class="inline-block w-1/3 md:hidden font-bold">Actions</span>
+                                        <a href="<?php echo site_url('/user/edit/' . $user['id']); ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded"><i class="fad fa-edit"></i></a>
+                                        <?php echo form_open('/user/delete/' . $user['id']); ?>
+                                        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">
+                                            <i class="fad fa-trash"></i>
+                                        </button>
+                                        <?php echo form_close(); ?>
+                                    </td>
+                                </tr>
+                            <? endforeach ?>
+                        <? endif ?>
                     </tbody>
                 </table>
             </div>
