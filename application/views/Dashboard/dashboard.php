@@ -22,7 +22,7 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F] card1">23</div>
+                            <div class="font-bold text-6xl text-[#0E194F] card1">300000</div>
                         </div>
                     </div>
                     <div class="shadow-md p-4 bg-white rounded-md border-2 border-[#e3e3e3]">
@@ -55,7 +55,7 @@
 					$({ Counter: 0 }).animate({
 						Counter: $('.card1').text()
 					}, {
-						duration: 3000,
+						duration: 5000,
 						easing: 'swing',
 						step: function() {
 							$('.card1').text(Math.ceil(this.Counter));
