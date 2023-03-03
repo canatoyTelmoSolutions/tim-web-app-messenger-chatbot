@@ -22,7 +22,7 @@ class UserModel extends CI_Model
             'address' => $this->input->post('address'),
             'username' => $this->input->post('email'),
             'email' => $this->input->post('email'),
-            'password' => password_hash('admin', PASSWORD_DEFAULT),
+            'password' => password_hash('admin', PASSWORD_ARGON2I),
             'role' => 'user'
         );
 
@@ -54,6 +54,18 @@ class UserModel extends CI_Model
         if ($query->num_rows()) {
             return $query->result_array()[0];
         } else return 0;
+    }
+
+    public function search($search_query)
+    {
+        $query = $this->db->like('email', $search_query)
+            ->or_like('firstname', $search_query)
+            ->or_like('lastname', $search_query)
+            ->get('users');
+
+        if ($query->num_rows()) {
+            return $query->result_array();
+        }
     }
 
     public function update($id)
