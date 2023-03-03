@@ -34,15 +34,15 @@
                     <div class="">
                         <p class="text-sm mb-1">First name</p>
                         <input type="text" name="firstname" value="<?php echo set_value('firstname') ?>" placeholder="First name" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm
-                         <? if (form_error('firstname')) echo 'form_error border border-pink-500'; ?>">
-                        <span class="text-xs text-pink-600"><? echo form_error('firstname') ?></span>
+                         <?php if (form_error('firstname')) echo 'form_error border border-pink-500'; ?>">
+                        <span class="text-xs text-pink-600"><?php echo form_error('firstname') ?></span>
                     </div>
 
                     <div class="">
                         <p class="text-sm mb-1">Last name</p>
                         <input type="text" name="lastname" value="<?php echo set_value('lastname') ?>" placeholder="Last name" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm
-                        <? if (form_error('lastname')) echo 'form_error border border-pink-500'; ?>">
-                        <span class="text-xs text-pink-600"><? echo form_error('lastname') ?></span>
+                        <?php if (form_error('lastname')) echo 'form_error border border-pink-500'; ?>">
+                        <span class="text-xs text-pink-600"><?php echo form_error('lastname') ?></span>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">
