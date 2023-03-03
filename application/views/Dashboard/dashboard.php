@@ -22,7 +22,7 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F]"><?php echo $users; ?></div>
+                            <div class="font-bold text-6xl text-[#0E194F] card1"><?php echo $users; ?></div>
                         </div>
                     </div>
                     <div class="shadow-md p-4 bg-white rounded-md border-2 border-[#e3e3e3]">
@@ -33,9 +33,10 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F]"><?php echo $users; ?></div>
+                            <div class="font-bold text-6xl text-[#0E194F] card2"><?php echo $users; ?></div>
                         </div>
                     </div>
+
                     <div class="shadow-md p-4 bg-white rounded-md border-2 border-[#e3e3e3]">
                         <div class="flex items-center text-xl">
                             <i class="far fa-users mr-2"></i>
@@ -44,7 +45,7 @@
 
                         <div class="flex justify-between">
                             <div class=""></div>
-                            <div class="font-bold text-6xl text-[#0E194F]"><?php echo $users; ?></div>
+                            <div class="font-bold text-6xl text-[#0E194F] card3"><?php echo $users; ?></div>
                         </div>
                     </div>
                 </div>
@@ -55,7 +56,7 @@
 					$({ Counter: 0 }).animate({
 						Counter: $('.card1').text()
 					}, {
-						duration: 3000,
+						duration: 5000,
 						easing: 'swing',
 						step: function() {
 							$('.card1').text(Math.ceil(this.Counter));
@@ -91,7 +92,7 @@
 
                     <div class="">
                         <!-- component -->
-                        <table class="min-w-full border-collapse block md:table text-sm">
+                        <table class="min-w-full border-collapse block md:table text-sm ">
                             <thead class="block md:table-header-group">
                                 <tr class="border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
                                     <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Name</th>
@@ -100,7 +101,8 @@
                                     <th class="bg-[#0E194F] p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Mobile</th>
                                 </tr>
                             </thead>
-                            <tbody class="block md:table-row-group">
+                            <div class="">
+                            <tbody class="block md:table-row-group overflow-scroll h-[200px]">
                                 <?php if ($recent_users) : ?>
                                     <?php foreach ($recent_users as $user) : ?>
                                         <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
@@ -124,6 +126,7 @@
                                     <?php endforeach ?>
                                 <?php endif ?>
                             </tbody>
+                            </div>
                         </table>
                     </div>
                 </div>
