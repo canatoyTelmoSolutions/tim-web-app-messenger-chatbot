@@ -12,7 +12,10 @@
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/images/logo.png" type="image/x-icon">
     <link href="<?php echo base_url(); ?>/assets/css/custom.css" rel="stylesheet" type="text/css" />
     <script type='text/javascript' src="<?php echo base_url(); ?>/assets/js/sidebar.js"></script>
-    <title><?php echo $title ?></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type = 'text/javascript' src = "<?php echo base_url(); ?>/assets/js/sidebar.js"></script>
+	<script type="text/javascript" src= "<?php echo base_url(); ?>/assets/js/dashboard.js"></script>
+    <title>TIM - Chatbot</title>
 </head>
 
 <body class="bg-[#F3F4F6]">

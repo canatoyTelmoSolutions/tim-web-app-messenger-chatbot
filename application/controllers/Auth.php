@@ -15,4 +15,10 @@ class Auth extends CI_Controller
 		$data['title'] = 'TIM - Chatbot';
 		$this->load->view('Auth/index', $data);
 	}
+
+	public function forgotpassword()
+	{
+		$this->load->helper('url');
+		$this->load->view('Auth/forgot');
+	}
 }

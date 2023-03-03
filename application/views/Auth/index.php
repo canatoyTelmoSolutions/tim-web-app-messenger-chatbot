@@ -22,9 +22,7 @@
             </div>
             <div class="">
                 <p class="text-sm mb-1">First name</p>
-                <input type="text" name="firstname" placeholder="First name" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">
-           
-                
+                <input type="text" name="firstname" placeholder="First name" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm">                
                 <div class="flex items-center justify-between mt-1">
                     <div class=""></div>
                     <a href="#" class="text-xs cursor-pointer transition-all">Forget password?</a>
@@ -41,7 +39,7 @@
 
 <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <!-- <form action="#">
+             <form action="#">
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -61,19 +59,21 @@
                     <input type="password" placeholder="Password" />
                     <label></label>
                 </div>
-                <button>Sign Up</button>
-            </form> -->
+               <a href="<?=base_url();?>">Sign Up</a> 
+            </form>
         </div>
+
+        
 <div class="overlay-container" id="overlayCon">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                   <img src="assets/images/login.svg" alt="">
+                <img src="assets/images/login.svg" alt="">
                 </div>
                 <div class="overlay-panel overlay-right">
                     <img src="assets/images/telmo.svg" alt="">
                 </div>
             </div>
-            <button id="overlayBtn"></button>
+            <button id="overlayBtn">Sign or Login</button>
         </div>
     </div>
 

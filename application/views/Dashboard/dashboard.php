@@ -49,6 +49,42 @@
                     </div>
                 </div>
 
+				<!-- I Add a here the script because it is not running when i pasted on Dashboard js  -->
+				<script>
+					// this is the script of the first card
+					$({ Counter: 0 }).animate({
+						Counter: $('.card1').text()
+					}, {
+						duration: 3000,
+						easing: 'swing',
+						step: function() {
+							$('.card1').text(Math.ceil(this.Counter));
+						}
+					});
+
+					// this is the script of the second card
+					$({ Counter: 0 }).animate({
+						Counter: $('.card2').text()
+					}, {
+						duration: 3000,
+						easing: 'swing',
+						step: function() {
+							$('.card2').text(Math.ceil(this.Counter));
+						}
+					});
+
+					// this is the script of the third card
+					$({ Counter: 0 }).animate({
+						Counter: $('.card3').text()
+					}, {
+						duration: 3000,
+						easing: 'swing',
+						step: function() {
+							$('.card3').text(Math.ceil(this.Counter));
+						}
+					});
+				</script>
+
                 <div class="mt-10 bg-white shadow-lg rounded-md border-2 border-[#e3e3e3] p-3">
 
                     <h1 class="font-bold mb-2 text-slate-800">Recently added</h1>
