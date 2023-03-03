@@ -104,9 +104,9 @@ class User extends CI_Controller
 	public function search()
 	{
 		$q = $this->input->get('q');
-		$users = $this->UserModel->search($q);
-		foreach ($users as $user) {
-			var_dump($user);
-		}
+		$data['users'] = $this->UserModel->search($q);
+		$data['title'] = 'Search';
+		$data['q'] = $q;
+		$this->load->view('search', $data);
 	}
 }
