@@ -58,7 +58,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['search']['GET'] = 'user/search/';
 
-$route['login']['GET'] = 'auth/index';
+$route['login']['GET'] = 'auth/login';
 $route['login']['POST'] = 'auth/authenticate';
 
 $route['logout']['GET'] = 'auth/invalidateSessions';

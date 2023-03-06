@@ -21,7 +21,7 @@
         50%  { transform: translateY(-10px); }
         100% { transform: translateY(0); }
     }
-
+	
 	.head{
 		text-decoration-line: underline ;
 		color: #FD810E;
@@ -36,16 +36,11 @@
 	<div class="">
 		<div class="flex justify-between pt-1 px-2 pl-0 text-white items-center max-w-[1200px] mx-auto">
 			<div class="">
-				<img 
-					src="<?php echo base_url('assets/images/logo.png'); ?>"
-					alt=""
-					class="w-[60px] md:w-[100px] mx-auto"
-				>
+				<img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="" class="w-[60px] md:w-[100px] mx-auto">
 			</div>
 
 			<div class="flex items-center font-bold">
-				<a href="<?php echo site_url('/auth'); ?>" class="text-sm md:text-md cursor-pointer text-[#212A64] font-bold hover:text-gray transition-all">Login</a>
-				<a href="<?php echo site_url('/auth'); ?>" class="text-sm md:text-md bg-[#212A64] ml-4 py-2 px-4 rounded-md cursor-pointer hover:bg-[#212A80] transition-all">Sign Up</a>
+				<a href="<?php echo base_url('login'); ?>" class="text-sm md:text-md cursor-pointer text-[#212A64] font-bold hover:text-gray transition-all">Login</a>
 			</div>
 		</div>
 	</div>
@@ -59,17 +54,13 @@
 
 				<p class="mb-10 font-semibold mt-4">Fostering Innovation in Business</p>
 
-				<a href="<?php echo site_url('/auth'); ?>" class="text-sm md:text-md font-bold text-white bg-[#0E194F] rounded-2xl py-2 md:py-3 px-4 md:px-6 w-fit hover:bg-slate-800 transition-all cursor-pointer">
+				<a href="<?php echo base_url('login'); ?>" class="text-sm md:text-md font-bold text-white bg-[#0E194F] rounded-2xl py-2 md:py-3 px-4 md:px-6 w-fit hover:bg-slate-800 transition-all cursor-pointer">
 					<span>Get Started</span>
 					<i class="fal fa-arrow-right ml-2 md:ml-4"></i>
 				</a>
 			</div>
 			<div class="stage">
-				<img 
-					src="<?php echo base_url('assets/images/landing_illustration.png'); ?>"
-					alt=""
-					class="w-[500px] mx-auto box bounce-1"
-					>
+				<img src="<?php echo base_url('assets/images/landing_illustration.png'); ?>" alt="" class="w-[500px] mx-auto box bounce-1">
 			</div>
 		</div>
 	</div>
