@@ -4,7 +4,7 @@
 <div class="grid grid-cols-[1fr_600px] flex " id="login-form">
     <div class=" grid items-center h-screen bg-gradient-to-br from-white via-sky-100 to-indigo-800 min-h-fit">
         <div class=" pl-10">
-            <img src="assets/images/login.svg" alt="" class=" box bounce-1 ">
+            <img src="assets/images/login.svg" alt="" class="box bounce-1 ">
         </div>
     </div>
     <div class=" grid place-items-center">
@@ -50,7 +50,7 @@
         animation-iteration-count: infinite;
         margin: 0 auto 0 auto;
         transform-origin: bottom;
-        width: 722px;
+        width: 500px;
     }
 
     .bounce-1 {
