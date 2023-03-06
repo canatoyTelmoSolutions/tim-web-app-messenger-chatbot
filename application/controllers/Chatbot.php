@@ -8,6 +8,11 @@ class Chatbot extends CI_Controller
         {
                 parent::__construct();
                 $this->load->helper('url');
+                $this->load->model('AuthModel');
+
+                if (!$this->AuthModel->user()) {
+                        redirect(base_url('/login'));
+                }
         }
 
 

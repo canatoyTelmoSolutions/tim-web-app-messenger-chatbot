@@ -56,6 +56,18 @@ class UserModel extends CI_Model
         } else return 0;
     }
 
+    public function search($search_query)
+    {
+        $query = $this->db->like('email', $search_query)
+            ->or_like('firstname', $search_query)
+            ->or_like('lastname', $search_query)
+            ->get('users');
+
+        if ($query->num_rows()) {
+            return $query->result_array();
+        }
+    }
+
     public function update($id)
     {
         $data = array(

@@ -12,6 +12,11 @@ class User extends CI_Controller
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->load->model('UserModel');
+		$this->load->model('AuthModel');
+
+		if (!$this->AuthModel->user()) {
+			redirect(base_url('/login'));
+		}
 	}
 
 	public function validation($inserting = true, $id = null)
@@ -99,5 +104,14 @@ class User extends CI_Controller
 	{
 		$this->UserModel->destroy($id);
 		redirect(site_url('/user'));
+	}
+
+	public function search()
+	{
+		$q = $this->input->get('q');
+		$data['users'] = $this->UserModel->search($q);
+		$data['title'] = 'Search';
+		$data['q'] = $q;
+		$this->load->view('search', $data);
 	}
 }
