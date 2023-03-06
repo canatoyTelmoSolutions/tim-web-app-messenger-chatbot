@@ -25,7 +25,7 @@ class User extends CI_Controller
 		$email_rule = 'required|valid_email';
 
 		if ($id and !$inserting) {
-			$existing_user = $this->UserModel->select('id', $id);
+			$existing_user = $this->UserModel->select($id);
 			$existing_mobile = $existing_user['mobile_number'];
 			$existing_email = $existing_user['email'];
 
@@ -113,5 +113,19 @@ class User extends CI_Controller
 		$data['title'] = 'Search';
 		$data['q'] = $q;
 		$this->load->view('search', $data);
+	}
+
+	public function testImageUpload()
+	{
+		$config['upload_path'] = './images/';
+		$config['allowed_types'] = 'gif|jpg|png';
+		$config['max_size'] = 2000;
+		$config['max_width'] = 1500;
+		$config['max_height'] = 1500;
+
+		$this->load->library('upload', $config);
+
+		var_dump($this->upload->do_upload('image'));
+		echo 'hi';
 	}
 }
