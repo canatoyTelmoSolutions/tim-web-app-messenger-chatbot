@@ -25,17 +25,19 @@
                 <div class="flex">
                 <div class="font-bold text-[50px] lg:text-[75px] mr-1">Your</div>
                 <div class="text-[#FD810E] font-bold text-[50px] lg:text-[75px]">Password?</div>
-         
                 </div>
+				<div class="text-[50px] ml-19 mt-6 lg:text-[29px] flex flex-row">Enter the email address associated</div>
+				<div class="text-[50px] ml-19 lg:text-[29px] flex flex-row">with your account.</div>
+                
                 <div class="w-full max-w-2xl">
-                <form class="  pt-2 pb-6 mb-3"></form>
+                <form class="  pt-2 pb-6 mb-3">
            <input class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Email Address">
              </form>
             
         </div>
 <br><br>
                <div class=" pt-2 p-20 pb-6">
-               <a href="<?php echo site_url('/auth'); ?>" class=" font-thin  md:text-md  text-black rounded-2xl py-2 md:py-3 px-4 md:px-6 w-fit  transition-all cursor-pointer">
+               <a href="<?php echo site_url('/login'); ?>" class=" font-thin  md:text-md  text-black rounded-2xl py-2 md:py-3 px-4 md:px-6 w-fit  transition-all cursor-pointer">
 					<span>Back to Log in</span>
 					
 				</a>
