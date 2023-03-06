@@ -30,7 +30,7 @@
                                     </tr>
                                 </thead>
                                 <div class="">
-                                    <tbody class="block md:table-row-group overflow-scroll h-[200px]">
+                                    <tbody class="block md:table-row-group overflow-scroll">
                                         <?php foreach ($users as $user) : ?>
                                             <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
                                                 <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
