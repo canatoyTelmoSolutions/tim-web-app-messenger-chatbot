@@ -83,7 +83,7 @@ class Migration_User extends CI_Migration
             'mobile_number' => '09123456789',
             'address' => 'Testing address',
             'username' => 'john_doe9',
-            'email' => 'john.doe@telmo.com',
+            'email' => 'john.doe@test.com',
             'password' => password_hash('admin', PASSWORD_DEFAULT),
             'role' => 'user'
         );
