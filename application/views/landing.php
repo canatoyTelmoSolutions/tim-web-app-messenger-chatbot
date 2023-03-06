@@ -39,8 +39,7 @@
 			</div>
 
 			<div class="flex items-center font-bold">
-				<a href="<?php echo site_url('/auth'); ?>" class="text-sm md:text-md cursor-pointer text-[#212A64] font-bold hover:text-gray transition-all">Login</a>
-				<a href="<?php echo site_url('/auth'); ?>" class="text-sm md:text-md bg-[#212A64] ml-4 py-2 px-4 rounded-md cursor-pointer hover:bg-[#212A80] transition-all">Sign Up</a>
+				<a href="<?php echo site_url('/auth'); ?>"  class="text-sm md:text-md bg-[#212A64] ml-4 py-2 px-4 rounded-md cursor-pointer hover:bg-[#212A80] transition-all">Login</a>
 			</div>
 		</div>
 	</div>
