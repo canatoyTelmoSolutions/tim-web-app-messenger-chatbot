@@ -48,10 +48,9 @@ class UserModel extends CI_Model
         return null;
     }
 
-    public function select($col, $id)
+    public function select($id)
     {
-        $query = $this->db->where('deleted_at', NULL)->where('role', 'user')->where($col, $id)->get('users');
-
+        $query = $this->db->where('deleted_at', NULL)->where('role', 'user')->where('id', $id)->get('users');
         if ($query->num_rows()) {
             return $query->result_array()[0];
         } else return 0;
