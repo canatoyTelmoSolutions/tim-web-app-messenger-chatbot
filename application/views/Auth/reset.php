@@ -18,7 +18,7 @@
 	<div class="max-w-[1200px] mx-auto p-2 md:p-0">
 		<div class="mt-[50px] md:grid grid-cols-2 place-items-center">
 			<div class="leading-none text-[#0E194F]">
-				<div class="font-bold text-[50px] lg:text-[75px] mt-20">Reset</div>
+				<div class="font-bold text-[50px] lg:text-[75px] mt-20">Reset </div>
                 <div class="flex">
                 <div class="font-bold text-[50px] lg:text-[75px] mr-2">Your</div>
                 <div class="text-[#FD810E] font-bold text-[50px] lg:text-[75px]" >Password</div>
