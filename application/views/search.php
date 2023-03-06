@@ -10,12 +10,12 @@
         </div>
 
         <div class="p-4 pt-[100px] md:px-10 py-[100px] cursor-default">
-            <h1 class="text-md md:text-2xl font-bold text-slate-800">Search</h1>
-            <p class="text-md md:text-sm font-normal text-slate-800">
-                Showing (<?php echo number_format(count($users != NULL ? $users : [])); ?>) results for "<?php echo $q; ?>"
-            </p>
-
             <?php if ($users) : ?>
+                <h1 class="text-md md:text-2xl font-bold text-slate-800">Search</h1>
+                <p class="text-md md:text-sm font-normal text-slate-800">
+                    Showing (<?php echo number_format(count($users != NULL ? $users : [])); ?>) results for "<?php echo $q; ?>"
+                </p>
+
                 <div class="mt-4">
                     <div class="mt-10 bg-white shadow-lg rounded-md border-2 border-[#e3e3e3] p-3">
                         <div class="">
@@ -57,6 +57,8 @@
                         </div>
                     </div>
                 </div>
+            <?php else : ?>
+                No records
             <?php endif ?>
         </div>
     </div>
