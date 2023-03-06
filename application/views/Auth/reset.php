@@ -1,19 +1,11 @@
-
-
-
+<?php $this->load->view('components/header'); ?>
 <style>
-	.stage {
-        display: flex;
-        height: 370px;
-        width: 100%;
-    }
+
     .box {
-        align-self: flex-end;
+      
         animation-duration: 5s;
         animation-iteration-count: infinite;
-        margin: 0 auto 0 auto;
-        transform-origin: bottom;
-        width: 200px;
+        
     }
     .bounce-1 {
         animation-name: bounce-1;
@@ -25,8 +17,6 @@
         100% { transform: translateY(0); }
     }
 </style>
-
-<?php $this->load->view('components/header'); ?>
 
 
 
@@ -42,16 +32,18 @@
 	<div class="max-w-[1200px] mx-auto p-2 md:p-0">
 		<div class="mt-[50px] md:grid grid-cols-2 place-items-center">
 			<div class="leading-none text-[#0E194F]">
-				<div class="font-bold text-[50px] lg:text-[75px] mt-20">Forgot</div>
+				<div class="font-bold text-[50px] lg:text-[75px] mt-20">Reset</div>
                 <div class="flex">
                 <div class="font-bold text-[50px] lg:text-[75px] mr-1">Your</div>
-                <div class="text-[#FD810E] font-bold text-[50px] lg:text-[75px]">Password?</div>
-         
+                <div class="text-[#FD810E] font-bold text-[50px] lg:text-[75px]">Password</div>
+                
                 </div>
                 <div class="w-full max-w-2xl">
                 <form class="  pt-2 pb-6 mb-3"></form>
            <input class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Email Address">
-             </form>
+           <input class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-5" id="email" type="text" placeholder="Password">
+               
+        </form>
             
         </div>
 <br><br>
@@ -60,7 +52,7 @@
 					<span>Back to Log in</span>
 					
 				</a>
-				<a href="<?php echo site_url('/reset'); ?>" class="text-sm md:text-md font-bold text-white bg-[#0E194F] rounded-2xl py-2 md:py-3 px-4 md:px-6 w-fit hover:bg-slate-800 transition-all cursor-pointer">
+				<a href="<?php echo site_url('/auth'); ?>" class="text-sm md:text-md font-bold text-white bg-[#0E194F] rounded-2xl py-2 md:py-3 px-4 md:px-6 w-fit hover:bg-slate-800 transition-all cursor-pointer">
 					<span>Reset Password</span>	
 				</a>
                 </div>
@@ -70,9 +62,9 @@
 
 
 
-			<div class="stage mt-20" >
+			<div class="stage" >
 				<img 
-					src="<?php echo base_url('assets/images/1991.png'); ?>"
+					src="<?php echo base_url('assets/images/reset.png'); ?>"
 					alt=""
 					class="w-[500px] mx-auto box bounce-1"
 					>
@@ -82,6 +74,3 @@
 
 
 </div>
-
-
-
