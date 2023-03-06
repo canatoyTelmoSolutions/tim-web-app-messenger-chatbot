@@ -111,7 +111,7 @@
                                 </tr>
                             </thead>
                             <div class="">
-                                <tbody class="block md:table-row-group overflow-scroll h-[200px]">
+                                <tbody class="block md:table-row-group overflow-scroll">
                                     <?php if ($recent_users) : ?>
                                         <?php foreach ($recent_users as $user) : ?>
                                             <tr class="bg-white border border-grey-500 md:border-none block md:table-row">
