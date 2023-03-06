@@ -32,10 +32,7 @@
 			transform: translateY(0);
 		}
 	}
-        display: flex;
-        height: 370px;
-        width: 100%;
-    }
+    
     .box {
         align-self: flex-end;
         animation-duration: 3.7s;
