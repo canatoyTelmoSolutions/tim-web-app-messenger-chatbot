@@ -33,7 +33,7 @@
                     <span class="text-xs text-pink-600"><?php echo form_error('password') ?></span>
                     <div class="flex items-center justify-between mt-1">
                         <div class=""></div>
-                        <a href="#" class="text-xs cursor-pointer transition-all">Forgot password?</a>
+                        <a href="<?php echo site_url('/auth/forgotpassword'); ?>" class="text-xs cursor-pointer transition-all">Forgot password?</a>
                     </div>
                 </div>
                 <button type="submit" class="w-full px-3 py-2 bg-[#0E194F] text-white outline-none rounded-md text-sm">Login</button>

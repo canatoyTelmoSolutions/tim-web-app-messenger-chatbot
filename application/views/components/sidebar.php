@@ -29,7 +29,7 @@
                         <i class="fal fa-chart-line"></i>
                         <h2 class="text-sm">Dashboard</h2>
 
-                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "dashboard") {
+                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 <?php if ($this->uri->segment(1) == "dashboard") {
                                                                                                                                             echo "block";
                                                                                                                                         } else {
                                                                                                                                             echo "hidden";
@@ -41,7 +41,7 @@
                         <i class="fal fa-users"></i>
                         <h2 class="text-sm">Users</h2>
 
-                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "user") {
+                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 <?php if ($this->uri->segment(1) == "user") {
                                                                                                                                             echo "block";
                                                                                                                                         } else {
                                                                                                                                             echo "hidden";
@@ -53,7 +53,7 @@
                         <i class="fal fa-robot"></i>
                         <h2 class="text-sm">Chatbot Settings</h2>
 
-                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block <?php if ($this->uri->segment(1) == "chatbot") {
+                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 <?php if ($this->uri->segment(1) == "chatbot") {
                                                                                                                                             echo "block";
                                                                                                                                         } else {
                                                                                                                                             echo "hidden";
@@ -76,7 +76,7 @@
                         <i class="fal fa-cog"></i>
                         <h2 class="text-sm">Settings</h2>
 
-                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block 
+                        <div class="absolute right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 
                         <?php if ($this->uri->segment(1) == "setting") {
                             echo "block";
                         } else {
@@ -86,7 +86,7 @@
                     <a href="<?php echo base_url('/logout'); ?>" class="group relative grid grid-cols-[30px_1fr] items-center p-2 cursor-pointer hover:bg-[#212A64] rounded-md transition-all hover:p-2 hover:px-3 hover:shadow-md">
                         <i class="fal fa-sign-out"></i>
                         <h2 class="text-sm">Logout</h2>
-                        <div class="absolute hidden right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2 group-hover:block">l</div>
+                        <div class="absolute hidden right-0 w-1 grow h-[10ppx] bg-[#FD810E] text-[#FD810E] rounded-md mr-2">l</div>
                     </a>
                 </div>
             </div>

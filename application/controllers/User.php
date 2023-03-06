@@ -84,7 +84,7 @@ class User extends CI_Controller
 	public function edit($id)
 	{
 		$data['title'] = 'Edit user';
-		$data['user'] = $this->UserModel->select('id', $id);
+		$data['user'] = $this->UserModel->select($id);
 		$this->load->view('User/edit', $data);
 	}
 

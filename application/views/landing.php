@@ -1,36 +1,30 @@
 <style>
 	.stage {
-		display: flex;
-		height: 370px;
-		width: 100%;
-	}
-
-	.box {
-		align-self: flex-end;
-		animation-duration: 5s;
-		animation-iteration-count: infinite;
-		margin: 0 auto 0 auto;
-		transform-origin: bottom;
-		width: 200px;
-	}
-
-	.bounce-1 {
-		animation-name: bounce-1;
-		animation-timing-function: linear;
-	}
-
-	@keyframes bounce-1 {
-		0% {
-			transform: translateY(0);
-		}
-
-		50% {
-			transform: translateY(-10px);
-		}
-
-		100% {
-			transform: translateY(0);
-		}
+        display: flex;
+        height: 370px;
+        width: 100%;
+    }
+    .box {
+        align-self: flex-end;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        margin: 0 auto 0 auto;
+        transform-origin: bottom;
+        width: 200px;
+    }
+    .bounce-1 {
+        animation-name: bounce-1;
+        animation-timing-function: linear;
+    }
+    @keyframes bounce-1 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+	
+	.head{
+		text-decoration-line: underline ;
+		color: #FD810E;
 	}
     
     .box {
@@ -73,9 +67,9 @@
 	<div class="max-w-[1200px] mx-auto p-2 md:p-0">
 		<div class="mt-[50px] md:grid grid-cols-2 place-items-center">
 			<div class="leading-none text-[#0E194F]">
-				<div class="font-bold text-[50px] lg:text-[106px]">Your</div>
-				<div class="font-bold text-[30px]">Business Our</div>
-				<div class="text-[#FD810E] font-bold text-[50px] lg:text-[106px]">SOLUTION</div>
+				<div class="font-bold text-[50px] lg:text-[80px] flex flex-row">Your Business</div>
+				<!-- <div class="font-bold text-[30px]">Business Our</div> -->
+				<div class="text-[#FD810E] font-bold text-[50px] lg:text-[80px] flex flex-row head"> OUR SOLUTION</div>
 
 				<p class="mb-10 font-semibold mt-4">Fostering Innovation in Business</p>
 
