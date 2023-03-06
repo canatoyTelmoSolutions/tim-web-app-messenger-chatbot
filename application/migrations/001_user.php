@@ -71,6 +71,11 @@ class Migration_User extends CI_Migration
             'created_at' => array(
                 'type' => 'TIMESTAMP'
             ),
+            'updated_at' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+                'null' => TRUE
+            )
         ));
 
         $this->dbforge->add_key('id', TRUE);

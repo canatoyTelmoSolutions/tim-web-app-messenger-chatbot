@@ -9,6 +9,7 @@ class UserModel extends CI_Model
     {
         $this->load->helper('url');
         $this->load->database();
+        date_default_timezone_set('Asia/Manila');
     }
 
     public function create()
@@ -31,7 +32,7 @@ class UserModel extends CI_Model
 
     public function index()
     {
-        $query = $this->db->get('users');
+        $query = $this->db->where('deleted_at', NULL)->where('role', 'user')->get('users');
         if ($query->num_rows()) {
             return $query->result_array();
         }
@@ -40,7 +41,7 @@ class UserModel extends CI_Model
 
     public function recent()
     {
-        $query = $this->db->order_by('id', 'DESC')->limit(7)->get('users');
+        $query = $this->db->where('deleted_at', NULL)->order_by('id', 'DESC')->limit(7)->get('users');
         if ($query->num_rows()) {
             return $query->result_array();
         }
@@ -49,7 +50,7 @@ class UserModel extends CI_Model
 
     public function select($col, $id)
     {
-        $query = $this->db->where($col, $id)->get('users');
+        $query = $this->db->where('deleted_at', NULL)->where($col, $id)->get('users');
 
         if ($query->num_rows()) {
             return $query->result_array()[0];
@@ -61,7 +62,8 @@ class UserModel extends CI_Model
         $query = $this->db->like('email', $search_query)
             ->or_like('firstname', $search_query)
             ->or_like('lastname', $search_query)
-            ->get('users');
+            ->where('deleted_at', NULL)
+            ->where('role', 'user')->get('users');
 
         if ($query->num_rows()) {
             return $query->result_array();
@@ -79,6 +81,7 @@ class UserModel extends CI_Model
             'address' => $this->input->post('address'),
             'username' => $this->input->post('email'),
             'email' => $this->input->post('email'),
+            'updated_at' => date('Y-m-d H:i:s')
         );
 
         return $this->db->update('users', $data, array('id' => $id));
@@ -86,6 +89,14 @@ class UserModel extends CI_Model
 
     public function destroy($id)
     {
-        return $this->db->delete('users', array('id' => $id));
+        $data = array(
+            'deleted_at' => date('Y-m-d H:i:s')
+        );
+
+        $condition = array(
+            'id' => $id
+        );
+
+        return $this->db->update('users', $data, $condition);
     }
 }
