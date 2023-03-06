@@ -41,7 +41,7 @@ class UserModel extends CI_Model
 
     public function recent()
     {
-        $query = $this->db->where('deleted_at', NULL)->order_by('id', 'DESC')->limit(7)->get('users');
+        $query = $this->db->where('deleted_at', NULL)->where('role', 'user')->order_by('id', 'DESC')->limit(7)->get('users');
         if ($query->num_rows()) {
             return $query->result_array();
         }
@@ -59,11 +59,13 @@ class UserModel extends CI_Model
 
     public function search($search_query)
     {
-        $query = $this->db->like('email', $search_query)
+        $query = $this->db
+            ->having('deleted_at', NULL)
+            ->having('role', 'user')
+            ->like('email', $search_query)
             ->or_like('firstname', $search_query)
             ->or_like('lastname', $search_query)
-            ->where('deleted_at', NULL)
-            ->where('role', 'user')->get('users');
+            ->get('users');
 
         if ($query->num_rows()) {
             return $query->result_array();
