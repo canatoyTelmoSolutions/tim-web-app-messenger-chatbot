@@ -6,7 +6,7 @@
     }
     .box {
         align-self: flex-end;
-        animation-duration: 5s;
+        animation-duration: 3.7s;
         animation-iteration-count: infinite;
         margin: 0 auto 0 auto;
         transform-origin: bottom;
