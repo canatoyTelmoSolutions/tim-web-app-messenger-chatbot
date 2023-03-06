@@ -21,6 +21,11 @@
         50%  { transform: translateY(-10px); }
         100% { transform: translateY(0); }
     }
+
+	.head{
+		text-decoration-line: underline ;
+		color: #FD810E;
+	}
 </style>
 
 <?php $this->load->view('components/header'); ?>
@@ -48,9 +53,9 @@
 	<div class="max-w-[1200px] mx-auto p-2 md:p-0">
 		<div class="mt-[50px] md:grid grid-cols-2 place-items-center">
 			<div class="leading-none text-[#0E194F]">
-				<div class="font-bold text-[50px] lg:text-[106px]">Your</div>
-				<div class="font-bold text-[30px]">Business Our</div>
-				<div class="text-[#FD810E] font-bold text-[50px] lg:text-[106px]">SOLUTION</div>
+				<div class="font-bold text-[50px] lg:text-[80px] flex flex-row">Your Business</div>
+				<!-- <div class="font-bold text-[30px]">Business Our</div> -->
+				<div class="text-[#FD810E] font-bold text-[50px] lg:text-[80px] flex flex-row head"> OUR SOLUTION</div>
 
 				<p class="mb-10 font-semibold mt-4">Fostering Innovation in Business</p>
 

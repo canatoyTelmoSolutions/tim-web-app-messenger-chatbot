@@ -1,30 +1,7 @@
 
 
 
-<style>
-	.stage {
-        display: flex;
-        height: 370px;
-        width: 100%;
-    }
-    .box {
-        align-self: flex-end;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        margin: 0 auto 0 auto;
-        transform-origin: bottom;
-        width: 200px;
-    }
-    .bounce-1 {
-        animation-name: bounce-1;
-        animation-timing-function: linear;
-    }
-    @keyframes bounce-1 {
-        0%   { transform: translateY(0); }
-        50%  { transform: translateY(-10px); }
-        100% { transform: translateY(0); }
-    }
-</style>
+
 
 <?php $this->load->view('components/header'); ?>
 
@@ -32,6 +9,8 @@
 
 <div class="bg-gradient-to-br from-white via-sky-100 to-indigo-800 min-h-fit h-screen">
 	<div class="">
+	<img src="<?php echo base_url('assets/images/blobt.svg'); ?>"class="w-[500px] mx-auto box bounce-1 index=100 absolute  right-0 top-0 ">
+    <img src="<?php echo base_url('assets/images/blob-bottom.png'); ?>"class="w-[500px] mx-auto box bounce-1 index=100 absolute left-0 bottom-0 ">
 		<div class="flex justify-between pt-18 px-2 pl-0 text-white items-center max-w-[1200px] mx-auto">
 			
 
@@ -56,11 +35,11 @@
         </div>
 <br><br>
                <div class="pt-2 pb-6">
-               <a href="<?php echo site_url('/auth'); ?>" class=" font-thin  md:text-md font-bold text-black rounded-2xl py-2 md:py-3 px-4 md:px-6 w-fit  transition-all cursor-pointer">
+               <a href="<?php echo site_url('/auth'); ?>" class=" font-thin  md:text-md  text-black rounded-2xl py-2 md:py-3 px-4 md:px-6 w-fit  transition-all cursor-pointer">
 					<span>Back to Log in</span>
 					
 				</a>
-				<a href="<?php echo site_url('/reset'); ?>" class="text-sm md:text-md font-bold text-white bg-[#0E194F] rounded-2xl py-2 md:py-3 px-4 md:px-6 w-fit hover:bg-slate-800 transition-all cursor-pointer">
+				<a href="<?php echo site_url('/auth/sentresetpassword'); ?>" class="text-sm md:text-md  text-white bg-[#0E194F] rounded py-2 md:py-3 px-4 md:px-6 w-fit hover:bg-slate-800 transition-all cursor-pointer">
 					<span>Reset Password</span>	
 				</a>
                 </div>
@@ -70,7 +49,7 @@
 
 
 
-			<div class="stage mt-20" >
+			<div class="stage mt-5" >
 				<img 
 					src="<?php echo base_url('assets/images/1991.png'); ?>"
 					alt=""

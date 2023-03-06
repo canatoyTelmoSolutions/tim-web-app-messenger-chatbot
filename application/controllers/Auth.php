@@ -21,14 +21,22 @@ class Auth extends CI_Controller
 
 	public function forgotpassword()
 	{
-		$this->load->view('Auth/forgot');
-		
-		
+		$this->load->view('Auth/forgot');	
 	}
+
 	public function resetpassword()
 	{
 		$this->load->view('Auth/reset');
 	}
+	public function sentresetpassword()
+	{
+		$this->load->view('Auth/sent');
+	}
+	public function resetsuccess()
+	{
+		$this->load->view('Auth/success');
+	}
+
 
 	public function authenticate()
 	{
