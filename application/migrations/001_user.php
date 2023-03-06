@@ -55,7 +55,8 @@ class Migration_User extends CI_Migration
             ),
             'password' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100'
+                'constraint' => '100',
+                'null' => TRUE
             ),
             'role' => array(
                 'type' => 'VARCHAR',
@@ -85,7 +86,7 @@ class Migration_User extends CI_Migration
             'username' => 'john_doe9',
             'email' => 'john.doe@test.com',
             'password' => password_hash('admin', PASSWORD_DEFAULT),
-            'role' => 'user'
+            'role' => 'admin'
         );
 
         $this->db->insert('users', $data);
