@@ -40,7 +40,7 @@
                     </div>
 
                     <?php if ($error) : ?>
-                        <span class="text-xs text-pink-600"><?php echo $error ?></span>
+                        <span class="text-xs text-pink-600 mx-auto"><?php echo $error ?></span>
                     <?php endif ?>
                     </div>
 
