@@ -12,28 +12,33 @@ class Migration_User extends CI_Migration
     {
         $this->dbforge->add_field(
             array(
-                'image' => array(
-                    'type' => 'VARCHAR',
-                    'constraint' => '255',
-                    'null' => TRUE
-                ),
                 'id' => array(
                     'type' => 'INT',
                     'constraint' => 5,
                     'unsigned' => TRUE,
                     'auto_increment' => TRUE
                 ),
+                'fb_id' => array(
+                    'type' => 'VARCHAR',
+                    'constraint' => '255',
+                    'null' => TRUE
+                ),
+                'image' => array(
+                    'type' => 'VARCHAR',
+                    'constraint' => '255',
+                    'null' => TRUE
+                ),
                 'username' => array(
                     'type' => 'VARCHAR',
-                    'constraint' => '100'
+                    'constraint' => '255'
                 ),
                 'firstname' => array(
                     'type' => 'VARCHAR',
-                    'constraint' => '100'
+                    'constraint' => '255'
                 ),
                 'lastname' => array(
                     'type' => 'VARCHAR',
-                    'constraint' => '100'
+                    'constraint' => '255'
                 ),
                 'age' => array(
                     'type' => 'INT',
@@ -52,7 +57,7 @@ class Migration_User extends CI_Migration
                 ),
                 'address' => array(
                     'type' => 'VARCHAR',
-                    'constraint' => '250',
+                    'constraint' => '255',
                     'null' => TRUE
                 ),
                 'email' => array(
@@ -61,7 +66,7 @@ class Migration_User extends CI_Migration
                 ),
                 'password' => array(
                     'type' => 'VARCHAR',
-                    'constraint' => '100',
+                    'constraint' => '255',
                     'null' => TRUE
                 ),
                 'role' => array(
