@@ -14,8 +14,15 @@
                 <h1 class="text-2xl font-bold text-slate-800">Edit User</h1>
 
                 <div class="mt-5 bg-white p-4 rounded-md shadow-md p-6">
-                    <?php echo form_open('user/update/' . $user['id']); ?>
-                    <div class="grid gap-x-6 gap-y-4">
+                    <?php echo form_open_multipart("user/update/{$user['id']}"); ?>
+                    <div class="grid gap-x-6 gap-y-4 p-5">
+
+                        <div>
+                            <img src="<?php echo base_url("uploads/images/{$user['image']}") ?>" alt="" srcset="">
+                            <p class="text-sm mb-1">User image</p>
+                            <input type="file" id="image" value="1" name="image" class="w-full text-sm">
+                        </div>
+
                         <div class="">
                             <p class="text-sm mb-1">First name</p>
                             <input type="text" name="firstname" value="<?php if (set_value('firstname')) {
