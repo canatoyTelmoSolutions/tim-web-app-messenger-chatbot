@@ -109,7 +109,7 @@ class User extends CI_Controller
 	public function edit($id, $error_message = NULL)
 	{
 		$data['title'] = 'Edit user';
-		$data['error_message'] = $error_message;
+		$data['error'] = $error_message;
 		$data['user'] = $this->UserModel->select($id);
 		$this->load->view('User/edit', $data);
 	}
