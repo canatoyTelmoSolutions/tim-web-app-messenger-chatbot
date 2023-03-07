@@ -13,10 +13,10 @@
 		</div>
 	</div>
 
-	<div class="max-w-[1200px] mx-auto p-2 md:p-0">
+	<div class="max-w-[1200px] mx-2 md:mx-10 p-2 md:p-0">
 		<div class="mt-[50px] md:grid grid-cols-2 place-items-center">
 			<div class="leading-none text-[#0E194F]">
-				<div class="text-[50px] lg:text-[26px] mt-20">Recovery email has been sent. Please check your 
+				<div class="text-[18px] lg:text-[26px] mt-20">Recovery email has been sent. Please check your 
                     email to proceed on recovering your account.</div>
                  
               
@@ -30,7 +30,7 @@
 				</a>
                 </div>
 
-                <div class="text-[50px] lg:text-[18px] mt-2">Didn’t received the link? Try again in 60s..</div>
+                <div class="text-[14px] lg:text-[18px] mt-2">Didn’t received the link? Try again in 60s..</div>
 			</div>
 
 

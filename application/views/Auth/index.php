@@ -16,7 +16,7 @@
             <form class="grid gap-4" method="POST" action="<?php echo base_url('login') ?>">
                 <div class="">
                     <p class="text-sm mb-1">Email</p>
-                    <input type="email" name="email" autocomplete="off" value="<?php if (set_value('email')) echo set_value('email'); ?>" <?php if (!form_error('email')) echo 'autofocus'; ?> placeholder="example@mail.com" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm
+                    <input type="email" name="email" value="<?php if (set_value('email')) echo set_value('email'); ?>" <?php if (!form_error('email')) echo 'autofocus'; ?> placeholder="example@mail.com" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm
                     <?php if (form_error('email') or $this->session->flashdata('denied') and !form_error('password')) echo 'form_error border border-pink-500'; ?>">
                     <span class="text-xs text-pink-600">
                         <?php if (form_error('email')) echo form_error('email');

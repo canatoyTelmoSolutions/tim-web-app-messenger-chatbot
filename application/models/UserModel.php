@@ -12,22 +12,9 @@ class UserModel extends CI_Model
         date_default_timezone_set('Asia/Manila');
     }
 
-    public function create()
+    public function create($form_fields)
     {
-        $data = array(
-            'firstname' => $this->input->post('firstname'),
-            'lastname' => $this->input->post('lastname'),
-            'age' => $this->input->post('age'),
-            'gender' => $this->input->post('gender'),
-            'mobile_number' => $this->input->post('number'),
-            'address' => $this->input->post('address'),
-            'username' => $this->input->post('email'),
-            'email' => $this->input->post('email'),
-            'password' => NULL,
-            'role' => 'user'
-        );
-
-        return $this->db->insert('users', $data);
+        return $this->db->insert('users', $form_fields);
     }
 
     public function index()
@@ -71,21 +58,9 @@ class UserModel extends CI_Model
         }
     }
 
-    public function update($id)
+    public function update($id, $form_fields)
     {
-        $data = array(
-            'firstname' => $this->input->post('firstname'),
-            'lastname' => $this->input->post('lastname'),
-            'age' => $this->input->post('age'),
-            'gender' => $this->input->post('gender'),
-            'mobile_number' => $this->input->post('number'),
-            'address' => $this->input->post('address'),
-            'username' => $this->input->post('email'),
-            'email' => $this->input->post('email'),
-            'updated_at' => date('Y-m-d H:i:s')
-        );
-
-        return $this->db->update('users', $data, array('id' => $id));
+        return $this->db->update('users', $form_fields, array('id' => $id));
     }
 
     public function destroy($id)
