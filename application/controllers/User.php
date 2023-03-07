@@ -117,15 +117,30 @@ class User extends CI_Controller
 
 	public function testImageUpload()
 	{
-		$config['upload_path'] = './images/';
+		$config['upload_path'] = './uploads/images';
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size'] = 2000;
 		$config['max_width'] = 1500;
 		$config['max_height'] = 1500;
+		$config['encrypt_name'] = TRUE;
+		$config['detect_mime'] = TRUE;
+		$config['remove_spaces'] = TRUE;
+		$config['allowed_types'] = '*';
 
-		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
 
-		var_dump($this->upload->do_upload('image'));
-		echo 'hi';
+		// var_dump(realpath('./uploads/images'));
+
+		if (!$this->upload->do_upload('image')) {
+			$error = array('error' => $this->upload->display_errors());
+
+			var_dump($error);
+			// $this->load->view('files/upload_form', $error);                                                                                                                              ;
+		} else {
+			$data = array('image_metadata' => $this->upload->data());
+
+			// $this->load->view('files/upload_result', $data);
+			var_dump($data);
+		}
 	}
 }
