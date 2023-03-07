@@ -16,9 +16,9 @@
 	<img src="<?php echo base_url('assets/images/blobt.svg'); ?>"class="w-[500px] mx-auto box bounce-1 absolute z-1 absolute  right-0 top-0 ">
     <img src="<?php echo base_url('assets/images/blobb.png'); ?>"class="w-[300px] mx-auto bounce-1 z-1 absolute left-0 bottom-0 ">
 		<div class="flex justify-between pt-18 px-2 pl-0 text-white items-center max-w-[1200px] mx-auto">
-			
 
-		
+
+
 		</div>
 	</div>
 
@@ -67,6 +67,3 @@
 
 
 </div>
-
-
-
