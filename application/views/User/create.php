@@ -17,9 +17,32 @@
                 <?php echo form_open_multipart('user/store'); ?>
                 <div class="grid gap-x-6 gap-y-4 p-5">
 
-                    <div>
-                        <p class="text-sm mb-1">User image</p>
-                        <input type="file" id="image" name="image" class="w-full text-sm">
+                    <div class="w-full">
+                        <div class="relative border-2 border-gray-200 rounded-full w-[180px] h-[180px] mx-auto overflow-hidden">
+                            <img src="<?php echo base_url('assets/images/71.png'); ?>" id="img" alt="" class="object-cover w-[180px] h-[180px] mx-auto rounded-full">
+                        
+                            <input
+                                id="imgInput"
+                                type="file"
+                                src
+                                accept="image/x-png,image/gif,image/jpeg"
+                                class=""
+                                name="image"
+                                onchange="loadInputImgToSrc(event)"
+                            />
+                            <div
+                                onclick="openImg()"
+                                class="absolute bottom-5 right-7 bg-gray-800/30 w-[35px] h-[35px] hover:bg-gray-900/50 transition-all rounded-full grid place-items-center text-white cursor-pointer"
+                            >
+                            <div class="fal fa-camera"></div>
+                            </div>
+                        </div>
+
+                        <?php if ($error) : ?>
+                            <span class="text-xs text-pink-600"><?php echo $error ?></span>
+                        <?php endif ?>
+
+
                     </div>
 
                     <div class="">
@@ -89,3 +112,4 @@
 </div>
 
 <?php $this->load->view('components/footer'); ?>
+
