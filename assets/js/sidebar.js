@@ -9,3 +9,24 @@ function openNav() {
   function closeNav() {
     document.getElementById("sidebar").style.left = "-1000px";
   }
+
+
+
+
+function openImg() {
+    const imgInput = document.getElementById('imgInput')
+
+    imgInput.click()
+}
+
+function loadInputImgToSrc(event) {
+    const reader = new FileReader();
+    reader.readAsDataURL(event.target.files[0]);
+
+    reader.onload = () => {
+      console.log(reader.result);
+    //   this.profiledata.image = reader.result;
+
+    document.getElementById("img").src = reader.result
+    };
+  }
