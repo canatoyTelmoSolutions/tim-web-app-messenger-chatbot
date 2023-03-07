@@ -14,12 +14,15 @@
             <h1 class="text-2xl font-bold text-slate-800">Create User</h1>
 
             <div class="mt-5 bg-white p-4 rounded-md shadow-md">
-                <?php echo form_open_multipart('user/store'); ?>
                 <div class="grid gap-x-6 gap-y-4 p-5">
 
                     <div>
                         <p class="text-sm mb-1">User image</p>
                         <input type="file" id="image" name="image" class="w-full text-sm">
+                        <?php if ($error) : ?>
+                            <?php echo form_open_multipart('user/store'); ?>
+                            <span class="text-xs text-pink-600"><?php echo $error ?></span>
+                        <?php endif ?>
                     </div>
 
                     <div class="">
