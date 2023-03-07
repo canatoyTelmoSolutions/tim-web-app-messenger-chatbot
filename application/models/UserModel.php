@@ -32,7 +32,7 @@ class UserModel extends CI_Model
 
     public function index()
     {
-        $query = $this->db->where('deleted_at', NULL)->where('role', 'user')->get('users');
+        $query = $this->db->having('deleted_at', NULL)->having('role', 'user')->get('users');
         if ($query->num_rows()) {
             return $query->result_array();
         }
@@ -41,7 +41,7 @@ class UserModel extends CI_Model
 
     public function recent()
     {
-        $query = $this->db->where('deleted_at', NULL)->where('role', 'user')->order_by('id', 'DESC')->limit(7)->get('users');
+        $query = $this->db->having('deleted_at', NULL)->having('role', 'user')->order_by('id', 'DESC')->limit(7)->get('users');
         if ($query->num_rows()) {
             return $query->result_array();
         }
@@ -50,7 +50,7 @@ class UserModel extends CI_Model
 
     public function select($id)
     {
-        $query = $this->db->where('deleted_at', NULL)->where('role', 'user')->where('id', $id)->get('users');
+        $query = $this->db->having('deleted_at', NULL)->having('role', 'user')->having('id', $id)->get('users');
         if ($query->num_rows()) {
             return $query->result_array()[0];
         } else return 0;

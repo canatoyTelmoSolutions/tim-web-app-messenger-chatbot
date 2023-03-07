@@ -26,6 +26,24 @@
 		text-decoration-line: underline ;
 		color: #FD810E;
 	}
+    
+    .box {
+        align-self: flex-end;
+        animation-duration: 3.7s;
+        animation-iteration-count: infinite;
+        margin: 0 auto 0 auto;
+        transform-origin: bottom;
+        width: 200px;
+    }
+    .bounce-1 {
+        animation-name: bounce-1;
+        animation-timing-function: linear;
+    }
+    @keyframes bounce-1 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
 </style>
 
 <?php $this->load->view('components/header'); ?>
@@ -41,6 +59,7 @@
 
 			<div class="flex items-center font-bold">
 				<a href="<?php echo base_url('login'); ?>" class="text-sm md:text-md cursor-pointer text-[#212A64] font-bold hover:text-gray transition-all">Login</a>
+				<a href="<?php echo site_url('/auth'); ?>"  class="text-sm md:text-md bg-[#212A64] ml-4 py-2 px-4 rounded-md cursor-pointer hover:bg-[#212A80] transition-all">Login</a>
 			</div>
 		</div>
 	</div>

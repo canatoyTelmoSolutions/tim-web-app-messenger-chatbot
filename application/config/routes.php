@@ -62,3 +62,5 @@ $route['login']['GET'] = 'auth/login';
 $route['login']['POST'] = 'auth/authenticate';
 
 $route['logout']['GET'] = 'auth/invalidateSessions';
+
+$route['post-image']['POST'] = 'user/testImageUpload';
