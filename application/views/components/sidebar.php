@@ -1,19 +1,25 @@
 <script>
-	// function toggleNav() {
-	// var nav = document.getElementById("sidebar");
-	// if (nav.style.width === "250px") {
-    	// nav.style.width = "100px";
-		// const navbarToggle = document.querySelector("#side");
-		// navbarToggle.classList.toggle('rotate-180');
-	// } else {
-    	// nav.style.width = "250px";
-	// }
-// }
+	function toggleNav() {
+	var nav = document.getElementById("sidebar");
+	if (nav.style.width === "250px") {
+    	nav.classList.toggle("close");
+		const navbarToggle = document.querySelector("#side");
+		navbarToggle.classList.toggle('rotate-180');
+	} else {
+    	nav.style.width = "250px";
+	}
+
+}
 </script>
 
-<div id="sidebar" class="fixed z-50 -left-[1000px] md:left-0 bg-[#0E194F] h-screen min-h-fit overflow-y-auto p-4 w-full md:w-[250px] shadow-2xl">
-	<!-- <i type="button" id="side" class="fa-solid fa-arrow-left bg-white p-2 absolute rounded-full -right-0 top-7" onclick="toggleNav();"></i> -->
-	<!-- <i type="button" id="open-slide" style="display: none" class="fa-solid fa-arrow-right bg-white p-2 absolute rounded-full -right-0 top-7" onclick="closeNav()"></i> -->
+<style>
+	.sidebar .close{
+		width: 100px;
+	}
+</style>
+
+<div id="sidebar" class="fixed z-50 -left-[1000px] md:left-0 bg-[#0E194F] h-screen min-h-fit overflow-y-auto p-4 w-full md:w-[250px] shadow-2xl close">
+	<i type="button" id="side" class="fa-solid fa-arrow-left bg-white p-2 absolute rounded-full -right-0 top-7" onclick="toggleNav();"></i>
     <div class="">
         <div class="hidden md:grid grid-cols-2 gap-4 p-4">
             <div class="bg-white p-1 w-fit h-fit">
@@ -25,13 +31,6 @@
             </div>
         </div>
         <hr class="hidden md:block" style="background-color: #FD810E; height: 2px; margin-left: 10px; border: none; ">
-
-        <!-- <div class="md:hidden flex items-center justify-between text-white"> -->
-            <!-- <div class="">TELMO</div> -->
-            <!-- <div onclick="closeNav()" class="block md:hidden bg-[#212A64] transition-all cursor-pointer rounded-full grid place-items-center w-[40px] h-[40px]"> -->
-                <!-- <i class="fal fa-times font-bold"></i> -->
-            <!-- </div> -->
-        <!-- </div> -->
 
         <div class="text-white">
             <div class="mt-10">
