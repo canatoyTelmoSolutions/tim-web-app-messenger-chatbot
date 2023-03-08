@@ -40,6 +40,10 @@ class Migration_User extends CI_Migration
                     'type' => 'VARCHAR',
                     'constraint' => '255'
                 ),
+                'birthdate' => array(
+                    'type' => 'VARCHAR',
+                    'constraint' => '255'
+                ),
                 'age' => array(
                     'type' => 'INT',
                     'constraint' => '100',
