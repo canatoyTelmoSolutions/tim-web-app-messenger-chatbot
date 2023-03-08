@@ -21,11 +21,17 @@ class User extends CI_Controller
 
 	public function formFields($image_file_name): array
 	{
+		$today = date('m/d/Y');
+		$birthdate = $this->input->post('birthdate');
+		$difference = date_diff(date_create(date('d/m/Y', strtotime($birthdate))), date_create($today));
+		$age = $difference->format('%y');
+
 		$form_fields = array(
 			'firstname' => $this->input->post('firstname'),
 			'lastname' => $this->input->post('lastname'),
-			'age' => $this->input->post('age'),
-			'gender' => $this->input->post('gender'),
+			'birthdate' => $birthdate,
+			'age' => $age,
+			'gender' => ucfirst($this->input->post('gender')),
 			'mobile_number' => $this->input->post('number'),
 			'address' => $this->input->post('address'),
 			'username' => $this->input->post('email'),
@@ -35,6 +41,7 @@ class User extends CI_Controller
 
 		// Add image to the $form_fields if not null
 		$image_file_name ? $form_fields['image'] = $image_file_name : '';
+		// var_dump($form_fields);
 		return $form_fields;
 	}
 
@@ -58,7 +65,7 @@ class User extends CI_Controller
 
 		$this->form_validation->set_rules('firstname', 'First Name', 'required|max_length[255]');
 		$this->form_validation->set_rules('lastname', 'Last Name', 'required|max_length[255]');
-		$this->form_validation->set_rules('age', 'Age', 'required');
+		$this->form_validation->set_rules('birthdate', 'Birthdate', 'required');
 		$this->form_validation->set_rules('gender', 'Gender', 'required');
 		$this->form_validation->set_rules('address', 'Address', 'required|max_length[255]');
 		$this->form_validation->set_rules(

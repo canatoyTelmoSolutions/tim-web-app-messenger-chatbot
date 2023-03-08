@@ -49,11 +49,16 @@
 
                     <div class="grid grid-cols-2 gap-4">
                         <div class="mb-3">
+                            <p>Birthdate</p>
+                            <input type="date" name="birthdate" id="birthdate" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm" value="<?php echo set_value('birthdate') ?>">
+                            <span class="text-xs text-pink-600"><?php echo form_error('birthdate') ?></span>
+                        </div>
+                        <!-- <div class="mb-3">
                             <p class="text-sm mb-1">Age</p>
                             <input type="number" name="age" value="<?php echo set_value('age') ?>" placeholder="Age" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm
                             <?php if (form_error('age')) echo 'form_error border border-pink-500'; ?>">
                             <span class="text-xs text-pink-600"><?php echo form_error('age') ?></span>
-                        </div>
+                        </div> -->
                         <div class="mb-3">
                             <p class="text-sm mb-1">Gender</p>
                             <select id="" name="gender" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm
