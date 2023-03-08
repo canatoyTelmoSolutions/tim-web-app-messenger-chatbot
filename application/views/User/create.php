@@ -49,11 +49,15 @@
 
                     <div class="grid grid-cols-2 gap-4">
                         <div class="mb-3">
+                            <p class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200">Select a date</p>
+                            <input type="text" class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" placeholder="Select a date" data-te-datepicker-toggle-ref data-te-datepicker-toggle-button-ref />
+                        </div>
+                        <!-- <div class="mb-3">
                             <p class="text-sm mb-1">Age</p>
                             <input type="number" name="age" value="<?php echo set_value('age') ?>" placeholder="Age" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm
                             <?php if (form_error('age')) echo 'form_error border border-pink-500'; ?>">
                             <span class="text-xs text-pink-600"><?php echo form_error('age') ?></span>
-                        </div>
+                        </div> -->
                         <div class="mb-3">
                             <p class="text-sm mb-1">Gender</p>
                             <select id="" name="gender" class="w-full px-3 py-2 bg-gray-200 outline-none rounded-md text-sm

@@ -45,13 +45,9 @@ class UserModel extends CI_Model
 
     public function search($search_query)
     {
-        $query = $this->db
-            ->having('deleted_at', NULL)
-            ->having('role', 'user')
-            ->like('email', $search_query)
-            ->or_like('firstname', $search_query)
-            ->or_like('lastname', $search_query)
-            ->get('users');
+        $query = $this->db->having('deleted_at', NULL)->having('role', 'user')
+            ->like('email', $search_query)->or_like('firstname', $search_query)
+            ->or_like('lastname', $search_query)->get('users');
 
         if ($query->num_rows()) {
             return $query->result_array();
