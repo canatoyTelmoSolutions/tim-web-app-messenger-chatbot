@@ -9,29 +9,17 @@ class UserModel extends CI_Model
     {
         $this->load->helper('url');
         $this->load->database();
+        date_default_timezone_set('Asia/Manila');
     }
 
-    public function create()
+    public function create($form_fields)
     {
-        $data = array(
-            'firstname' => $this->input->post('firstname'),
-            'lastname' => $this->input->post('lastname'),
-            'age' => $this->input->post('age'),
-            'gender' => $this->input->post('gender'),
-            'mobile_number' => $this->input->post('number'),
-            'address' => $this->input->post('address'),
-            'username' => $this->input->post('email'),
-            'email' => $this->input->post('email'),
-            'password' => NULL,
-            'role' => 'user'
-        );
-
-        return $this->db->insert('users', $data);
+        return $this->db->insert('users', $form_fields);
     }
 
     public function index()
     {
-        $query = $this->db->get('users');
+        $query = $this->db->having('deleted_at', NULL)->having('role', 'user')->get('users');
         if ($query->num_rows()) {
             return $query->result_array();
         }
@@ -40,17 +28,16 @@ class UserModel extends CI_Model
 
     public function recent()
     {
-        $query = $this->db->order_by('id', 'DESC')->limit(7)->get('users');
+        $query = $this->db->having('deleted_at', NULL)->having('role', 'user')->order_by('id', 'DESC')->limit(7)->get('users');
         if ($query->num_rows()) {
             return $query->result_array();
         }
         return null;
     }
 
-    public function select($col, $id)
+    public function select($id)
     {
-        $query = $this->db->where($col, $id)->get('users');
-
+        $query = $this->db->having('deleted_at', NULL)->having('role', 'user')->having('id', $id)->get('users');
         if ($query->num_rows()) {
             return $query->result_array()[0];
         } else return 0;
@@ -58,34 +45,30 @@ class UserModel extends CI_Model
 
     public function search($search_query)
     {
-        $query = $this->db->like('email', $search_query)
-            ->or_like('firstname', $search_query)
-            ->or_like('lastname', $search_query)
-            ->get('users');
+        $query = $this->db->having('deleted_at', NULL)->having('role', 'user')
+            ->like('email', $search_query)->or_like('firstname', $search_query)
+            ->or_like('lastname', $search_query)->get('users');
 
         if ($query->num_rows()) {
             return $query->result_array();
         }
     }
 
-    public function update($id)
+    public function update($id, $form_fields)
     {
-        $data = array(
-            'firstname' => $this->input->post('firstname'),
-            'lastname' => $this->input->post('lastname'),
-            'age' => $this->input->post('age'),
-            'gender' => $this->input->post('gender'),
-            'mobile_number' => $this->input->post('number'),
-            'address' => $this->input->post('address'),
-            'username' => $this->input->post('email'),
-            'email' => $this->input->post('email'),
-        );
-
-        return $this->db->update('users', $data, array('id' => $id));
+        return $this->db->update('users', $form_fields, array('id' => $id));
     }
 
     public function destroy($id)
     {
-        return $this->db->delete('users', array('id' => $id));
+        $data = array(
+            'deleted_at' => date('Y-m-d H:i:s')
+        );
+
+        $condition = array(
+            'id' => $id
+        );
+
+        return $this->db->update('users', $data, $condition);
     }
 }

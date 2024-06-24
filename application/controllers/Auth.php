@@ -13,7 +13,7 @@ class Auth extends CI_Controller
 		$this->load->model('AuthModel');
 	}
 
-	public function index()
+	public function login()
 	{
 		$data['title'] = 'Login';
 		$this->load->view('Auth/index', $data);
@@ -23,6 +23,20 @@ class Auth extends CI_Controller
 	{
 		$this->load->view('Auth/forgot');
 	}
+
+	public function resetpassword()
+	{
+		$this->load->view('Auth/reset');
+	}
+	public function sentresetpassword()
+	{
+		$this->load->view('Auth/sent');
+	}
+	public function resetsuccess()
+	{
+		$this->load->view('Auth/success');
+	}
+
 
 	public function authenticate()
 	{
@@ -37,9 +51,9 @@ class Auth extends CI_Controller
 			);
 
 			$this->AuthModel->login($data) ?
-				redirect(site_url('/dashboard')) : $this->index();
+				redirect(site_url('/dashboard')) : $this->login();
 		} else {
-			$this->index();
+			$this->login();
 		}
 	}
 
